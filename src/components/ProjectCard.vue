@@ -28,7 +28,6 @@ export default {
         row-gap : 2%;
         justify-content : flex-end;
         text-align: end;
-        border : 1px solid #131412;
     }
 
     .categories {

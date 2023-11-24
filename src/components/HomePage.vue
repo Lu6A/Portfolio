@@ -1,20 +1,11 @@
 <template>
 <div class="home-page">
-    <TitleHomePage/>
+    <TitleHomePage class="title"/>
     <div class="buttons">
         <ButtonGeneric/>
         <ButtonGeneric/>
     </div>
-    <div class="projects">
-        <!-- <ProjectsCarousel/> -->
-        <ProjectCard/>
-        <ProjectCard/>
-        <ProjectCard/>
-        <ProjectCard/>
-        <ProjectCard/>
-        <ProjectCard/>
-        <ProjectCard/>
-    </div>   
+    <ProjectsCarousel class="projects"/>  
 </div>
 </template>
 
@@ -22,17 +13,15 @@
 <script>
 import TitleHomePage from './TitleHomePage.vue';
 import ButtonGeneric from './ButtonGeneric.vue';
-//import ProjectsCarousel from './ProjectsCarousel.vue';
-import ProjectCard from './ProjectCard.vue';
+import ProjectsCarousel from './ProjectsCarousel.vue';
+
 
 export default {
     name: 'HomePage',
     components: {
     TitleHomePage,
     ButtonGeneric,
-    ProjectCard,
-    //ProjectsCarousel
-
+    ProjectsCarousel
 }
 }
 </script>
@@ -45,10 +34,14 @@ export default {
     margin-right : 3%;
     display : grid;
     grid-template-columns: auto auto 2vw;
-    grid-template-rows: auto 3fr;
+    grid-template-rows: min-content 1fr;
     grid-template-areas: 
     "title buttons ." 
     "projects projects projects";
+}
+
+.title {
+    grid-area: title;
 }
 
 .buttons {
@@ -60,11 +53,6 @@ export default {
 
 .projects {
     grid-area: projects;
-    overflow-y: hidden;
-    overflow-x: auto;
-    white-space: nowrap;
-    display : flex;
-    flex-wrap: nowrap;
 }
 
 </style>
