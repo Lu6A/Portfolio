@@ -1,27 +1,41 @@
 <template>
-    <div class = "projectCard">
-        <div class = "categories">
-            <p>En groupe</p>
-        </div>
-        <p class="title">Titre du projet</p>
-        <div class = "imgContainer">
-            <img src = "https://picsum.photos/200/300" alt = "image">
-        </div>
+    <div class="projectCard">
+      <div class="categories">
+        <p>{{ category }}</p>
+      </div>
+      <p class="title">{{ title }}</p>
+      <div class="imgContainer">
+        <img :src="imageSrc" alt="image" />
+      </div>
     </div>
-</template>
+  </template>
 
 <script>
 export default {
     name: 'ProjectCard',
     components: {
-    }
+    },
+    props: {
+    title: {
+      type: String,
+      required: true,
+    },
+    category: {
+      type: String,
+      required: true,
+    },
+    imageSrc: {
+      type: String,
+      required: true,
+    },
+  },
 }
 </script>
 
 
 <style scoped>
     .projectCard {
-        min-width: 20%;
+        width: 320px;
         height : 100%;
         display : flex;
         flex-direction : column;
