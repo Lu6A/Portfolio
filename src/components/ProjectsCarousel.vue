@@ -64,6 +64,7 @@ export default {
         this.visibleProjects.push(firstProject);
         carousel.scrollLeft -= this.projectWidth;
       }
+      this.fillVisibleProjects();
     },
 
     fillVisibleProjects() {
