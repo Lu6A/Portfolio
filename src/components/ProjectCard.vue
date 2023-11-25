@@ -1,9 +1,9 @@
 <template>
     <div class = "projectCard">
         <div class = "categories">
-            <p>En groupe</p>
+            <p>{{category}}</p>
         </div>
-        <p class="title">Titre du projet</p>
+        <p class="title">{{projectName}}</p>
         <div class = "imgContainer">
             <img src = "https://picsum.photos/200/300" alt = "image">
         </div>
@@ -14,14 +14,28 @@
 export default {
     name: 'ProjectCard',
     components: {
-    }
+    },
+    props: {
+    projectName: {
+      type: String,
+      required: true,
+    },
+    category: {
+      type: String,
+      required: true,
+    },
+    projectImg: {
+      type: String,
+      required: true,
+    },
+  },
 }
 </script>
 
 
 <style scoped>
     .projectCard {
-        min-width: 20%;
+        /* min-width: 20%; */
         height : 100%;
         display : flex;
         flex-direction : column;
