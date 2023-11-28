@@ -5,7 +5,7 @@
       </div>
       <p class="title">{{ project.title }}</p>
       <div class="imgContainer">
-        <img :src="project.imageSrc" alt="image" />
+        <img v-bind:src='project.imageSrc' alt="image" />
       </div>
     </div>
   </template>
@@ -52,12 +52,23 @@ export default {
     .imgContainer {
         width : 100%;
         height : 80%;
+        overflow : hidden;
     }
 
     .imgContainer img {
         width : 100%;
         height : 100%;
-        object-fit : cover;
+        /* object-fit : cover; */
+        transform-origin: center center;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition: .7s ease-in;
+        transition: .7s ease;
+    }
+
+    .imgContainer img:hover {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
     }
 
 </style>
