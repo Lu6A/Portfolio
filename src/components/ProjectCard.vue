@@ -1,34 +1,26 @@
 <template>
     <div class="projectCard">
       <div class="categories">
-        <p>{{ category }}</p>
+        <p>{{ project.category }}</p>
       </div>
-      <p class="title">{{ title }}</p>
+      <p class="title">{{ project.title }}</p>
       <div class="imgContainer">
-        <img :src="imageSrc" alt="image" />
+        <img :src="project.imageSrc" alt="image" />
       </div>
     </div>
   </template>
 
 <script>
+
 export default {
     name: 'ProjectCard',
     components: {
     },
     props: {
-    title: {
-      type: String,
-      required: true,
-    },
-    category: {
-      type: String,
-      required: true,
-    },
-    imageSrc: {
-      type: String,
-      required: true,
-    },
-  },
+    project: {
+      type : Object,
+      required : true,},
+  }
 }
 </script>
 
@@ -42,6 +34,7 @@ export default {
         row-gap : 2%;
         justify-content : flex-end;
         text-align: end;
+        border : 1px solid #131412;
     }
 
     .categories {
