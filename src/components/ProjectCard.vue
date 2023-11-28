@@ -27,14 +27,13 @@ export default {
 
 <style scoped>
     .projectCard {
-        width: 320px;
+        width: 20rem;
         height : 100%;
         display : flex;
         flex-direction : column;
         row-gap : 2%;
         justify-content : flex-end;
         text-align: end;
-        border : 1px solid #131412;
     }
 
     .categories {

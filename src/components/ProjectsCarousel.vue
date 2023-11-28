@@ -1,8 +1,8 @@
 <template>
-    <div class="projectsCarousel" ref="carousel">
-      <div class="projectWrapper" :style="{ width: projects.length * projectWidth + 'px' }">
-        <div class="innerWrapper">
-        <ProjectCard v-for="project in duplicatedProjects" :key="project.id" :project="project" class="card" />
+    <div class="sliderWrap" ref="sliderWrap">
+      <div class="slider" :style="{ transform: `translateX(${-scrollPos}px)`}">
+        <div class="projectWrapper" v-for="project in duplicatedProjects" :key="project.id">
+          <ProjectCard :project="project" class="card" />
         </div>
       </div>
     </div>
@@ -30,98 +30,78 @@ export default {
         // { id: 9, title: 'Projet 9', category: 'Catégorie 9', imageSrc: 'https://picsum.photos/200/300' },
         // { id: 10, title: 'Projet 10', category: 'Catégorie 10', imageSrc: 'https://picsum.photos/200/300' },
       ],
-      //sequenceLength: 2,
-      numberOfVisibleProjects: 6,
+      duplicatedProjects: [],
+      scrollPos: 0,
       isMounted: false,
     };
   },
 
-  computed: {
-    
-    duplicatedProjects() {
-      return [...this.projects, ...this.projects];
+  methods: {
+    duplicateProjects() {
+    this.duplicatedProjects = [...this.projects, ...this.projects];
     },
 
-    projectWidth() {
-      // Calculez la largeur totale d'une seule carte
-      return this.isMounted ? this.$refs.carousel.offsetWidth / this.numberOfVisibleProjects : 0;
+    handleScroll() {
+    if (window.innerWidth > 1024 && this.isMounted) {
+      // Obtient la position actuelle de défilement horizontal du conteneur
+      if (this.$refs.sliderWrap) {
+        this.scrollPos = this.$refs.sliderWrap.scrollLeft;
+
+        // Calcule la largeur d'un projet (chaque projet a la même largeur)
+        const projectWidth = this.$refs.sliderWrap.scrollWidth / this.duplicatedProjects.length;
+
+        // Vérifie si la position de défilement dépasse la fin du contenu
+        if (this.scrollPos >= this.$refs.sliderWrap.scrollWidth - this.$refs.sliderWrap.clientWidth - 10) {
+          // Si c'est le cas, réinitialise la position de défilement au début pour créer l'effet de défilement infini
+          this.$refs.sliderWrap.scrollLeft = 1;
+        } else if (this.scrollPos <= 0) {
+          // Si la position de défilement est inférieure ou égale à zéro, réinitialise la position au dernier projet
+          this.$refs.sliderWrap.scrollLeft = this.$refs.sliderWrap.scrollWidth - this.$refs.sliderWrap.clientWidth - projectWidth;
+        }
+      }
+      // Planifie une nouvelle exécution de la fonction handleScroll lors de la prochaine animation de la frame
+      requestAnimationFrame(this.handleScroll);
+    }
     },
-
-    // visibleProjects() {
-    //   const totalProjects = this.projects.length;
-    //   const startIndex = totalProjects - this.numberOfVisibleProjects;
-
-    //   // Réorganisez les projets de manière circulaire
-    //   return [
-    //     ...this.projects.slice(startIndex),
-    //     ...this.projects,
-    //     ...this.projects.slice(0, startIndex),
-    //   ];
-    // },
-  },
+},  
 
   mounted() {
+    this.duplicateProjects(); // Appelez la méthode pour dupliquer les projets
     this.isMounted = true;
-    this.$refs.carousel.addEventListener('scroll', this.handleScroll);
-    console.log(this.duplicatedProjects);
+    window.addEventListener('resize', this.handleScroll);
+    this.handleScroll();
   },
 
-  beforeUnmount() {
-    this.$refs.carousel.removeEventListener('scroll', this.handleScroll);
-  },
 
-  methods: {
-    //handleScroll() {
-    //   const carousel = this.$refs.carousel;
 
-    //   if (carousel.scrollLeft <= 0) {
-    //     // Vérifiez si le défilement est très proche du début
-    //     this.loadMoreProjects('left');
-    //   } else if (carousel.scrollLeft + carousel.offsetWidth >= carousel.scrollWidth - 10) {
-    //     // La condition a été ajustée pour s'assurer que le défilement est très proche de la fin
-    //     this.loadMoreProjects('right');
-    //   }
-    // },
-
-    // loadMoreProjects(direction) {
-    //   // Ajoutez tous les projets au tableau
-    //   if (direction === 'left') {
-    //     // Dupliquez les projets et ajoutez-les à la fin du tableau
-    //     this.projects.push(...this.projects.map((project) => ({ ...project })));
-    //   } else {
-    //     // Dupliquez les projets et ajoutez-les au début du tableau
-    //     this.projects.unshift(...this.projects.map((project) => ({ ...project })));
-    //   }
-    //   console.log('loadMoreProjects appelée');
-    // },
-  },
 };
 </script>
 
 <style scoped>
-.projectsCarousel {
+.sliderWrap {
   overflow-y: hidden;
   overflow-x: auto;
   white-space: nowrap;
+  scrollbar-width: none; /* Pour Firefox */
+  -ms-overflow-style: none;
+}
+
+.sliderWrap::-webkit-scrollbar {
+  display: none;
+}
+
+.slider {
   display: flex;
 }
 
 .projectWrapper {
   display: flex;
-  justify-content: center;
-  position: relative; /* Ajout de position relative */
+  flex: 0 0 auto;
 }
 
-.innerWrapper {
-  display: flex;
-  position: absolute; /* Ajout de position absolue */
-  left: 0; /* Alignez l'élément intérieur à gauche */
-}
-
-
-.card 
+/* .card 
 {
   flex : 0 0 auto;
-}
+} */
 
 </style>
