@@ -1,16 +1,15 @@
 <template>
-  <HomePage/>
+    <main>
+      <router-view></router-view> 
+    </main>
 </template>
 
 <script>
-import HomePage from './components/HomePage.vue'
-//import ButtonGeneric from './components/ButtonGeneric.vue'
+
 
 export default {
   name: 'App',
   components: {
-    HomePage,
-    //ButtonGeneric
   }
 }
 </script>
@@ -54,6 +53,11 @@ p {
   font-family: 'Inter', sans-serif;
   margin : 0;
 } 
+
+a{
+  text-decoration: none;
+  color: #131412;
+}
 
 
 </style>

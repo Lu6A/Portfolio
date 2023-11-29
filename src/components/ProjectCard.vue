@@ -1,4 +1,5 @@
 <template>
+  <router-link :to="'/' + project.title" >
     <div class="projectCard">
       <div class="categories">
         <p v-for="category in project.categories" :key="category">{{category}}</p>
@@ -8,6 +9,7 @@
         <img v-bind:src='project.imageSrc' alt="image" />
       </div>
     </div>
+  </router-link>
   </template>
 
 <script>
@@ -62,7 +64,6 @@ export default {
     .imgContainer img {
         width : 100%;
         height : 100%;
-        /* object-fit : cover; */
         transform-origin: center center;
         -webkit-transform: scale(1);
         transform: scale(1);
