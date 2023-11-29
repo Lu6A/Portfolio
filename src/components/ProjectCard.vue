@@ -1,7 +1,7 @@
 <template>
     <div class="projectCard">
       <div class="categories">
-        <p>{{ project.category }}</p>
+        <p v-for="category in project.categories" :key="category">{{category}}</p>
       </div>
       <p class="title">{{ project.title }}</p>
       <div class="imgContainer">
@@ -38,6 +38,10 @@ export default {
 
     .categories {
         margin-right : 3%;
+        display : flex;
+        justify-content: flex-end;
+        column-gap: 10%;
+        
     }
 
     .title {
