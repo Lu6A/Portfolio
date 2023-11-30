@@ -80,7 +80,7 @@ export default {
 
 <style scoped>
 .sliderWrap {
-  overflow-y: hidden;
+  overflow-y : hidden;
   overflow-x: auto;
   white-space: nowrap;
   scrollbar-width: none; /* Pour Firefox */

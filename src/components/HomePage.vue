@@ -29,7 +29,7 @@ export default {
 
 <style>
 .home-page {
-    height: 100%;
+    height: 100%;   
     width: 100%;
     margin-right : 3%;
     display : grid;

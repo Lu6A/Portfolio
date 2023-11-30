@@ -24,10 +24,13 @@ export default {
   },
   methods: {
     handleClick() {
+      if (this.buttonText == "À propos") {
+        this.$router.push("/about");
       console.log("Bouton cliqué !");
     }
+    }
   }
-};
+}
 </script>
 
 <style scoped>

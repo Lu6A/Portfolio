@@ -24,7 +24,7 @@ html {
 }
 
 body {
-  margin : 5vh 0 0 0;
+  margin : 4vh 0 0 0;
   height : 95vh;
 }
 
