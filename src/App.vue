@@ -36,7 +36,8 @@ body {
 h1 {
   font-family: 'Prompt', sans-serif;
   font-weight: 800;
-  font-size: 2.5rem;
+  font-size: 4rem;
+  text-transform: uppercase;
   color: #131412;
   margin: 0;
 }
