@@ -3,10 +3,12 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import App from './App.vue'
 
 import HomePage from './components/HomePage.vue'
+import AboutPage from './components/AboutPage.vue'
 import CombimacProject from './components/CombimacProject.vue'
 
 const routes = [
     { path: '/Combimac', component: CombimacProject},
+    { path: '/About', component: AboutPage},
     { path: '/' , component: HomePage },
 ]
 
