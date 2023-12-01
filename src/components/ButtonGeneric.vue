@@ -1,5 +1,5 @@
 <template>
-  <button @click="handleClick" :class="buttonClass">
+  <button @click="handleClick">
     <div class = "button-container">
       <span>{{ buttonText }}</span>
       <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
@@ -28,14 +28,14 @@ export default {
         this.$router.push("/about");
       console.log("Bouton cliqué !");
     }
-    }
   }
 }
+};
 </script>
 
 <style scoped>
 
-.general {
+button {
   width: 8.5rem;
   height: 2.5rem;
   border: 1px solid #131412;

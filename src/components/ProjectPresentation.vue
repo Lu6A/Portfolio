@@ -8,13 +8,20 @@
     </div>
     <div class="description">
         <p>{{project.description}}</p>
+        <ButtonProject :project="project" :style="{'--projectColor' : project.color}"/>
     </div>
 </div>
 </template>
 
 <script>
+
+import ButtonProject from './ButtonProject.vue';
+
 export default {
     name: 'ProjectPresentation',
+    components: {
+        ButtonProject
+    },
     props: {
         project: {
             type: Object,
@@ -25,6 +32,10 @@ export default {
 </script>
 
 <style scoped>
+
+p{
+    font-weight : 500;
+}
 
 .projectPresentation
 {
@@ -45,10 +56,21 @@ export default {
 .categories {
     display : flex;
     column-gap : 3%;
+    font-weight : 700;
 }
 
 .description {
     width : 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+a {
+    margin-top : 10%;
+    padding : 2% 5%;
+    border-radius : 1rem;
+}
+
 
 </style>
