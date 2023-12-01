@@ -33,9 +33,6 @@ export default {
 
 <style scoped>
 
-p{
-    font-weight : 500;
-}
 
 .projectPresentation
 {
@@ -66,11 +63,9 @@ p{
     align-items: center;
 }
 
-a {
-    margin-top : 10%;
-    padding : 2% 5%;
-    border-radius : 1rem;
+.description p {
+    font-weight : 500;
+    margin-bottom : 10%;
 }
-
 
 </style>

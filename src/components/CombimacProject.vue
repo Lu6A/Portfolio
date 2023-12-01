@@ -1,7 +1,16 @@
 <template>
     <NavBar/>
     <ProjectPresentation :project="project"/>
-    <!-- <span class = blueBackground1></span> -->
+    <div class="videoContainer">
+      <iframe
+        :src="'https://www.youtube.com/embed/k7d7twiG1os'"
+        frameborder="0"
+        allowfullscreen
+        ref="video"
+      ></iframe>
+    </div>
+    <div class="backgroundRectangle1" :style = "{'top' : videoCenter + 'px'}"></div>
+
 </template>
 
 <script>
@@ -27,9 +36,43 @@ export default {
         link : 'combimac.oulico.fr',
         buttonText : 'Voir le site'
         },
-        // pageColor : '#79C9D8'
+        videoCenter : 0,
+        // videoPositionY : this.$refs.video.offsetLeft,
     }
+    },
+
+    mounted() {
+        this.videoCenter = this.$refs.video.getBoundingClientRect().top + window.scrollY + this.$refs.video.offsetHeight/2;
     }
 }
 
 </script>
+
+<style scoped>
+
+.videoContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+iframe {
+    width: 50vw;
+    aspect-ratio: 16/9;
+    border: none;
+    border-radius: 1rem;
+    /* position : relative; */
+}
+
+.backgroundRectangle1 {
+--projectColor: #79C9D8;
+  position: absolute;
+  /* top: 953px; */
+  width: 100%; /* Largeur de la page */
+  height: 200px; /* Hauteur du rectangle */
+  background-color: var(--projectColor) ;/* Couleur du rectangle */
+  z-index: -1; /* Place le rectangle en arrière-plan */
+}
+
+</style>
