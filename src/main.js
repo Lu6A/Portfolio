@@ -4,7 +4,7 @@ import App from './App.vue'
 
 import HomePage from './components/HomePage.vue'
 import AboutPage from './components/AboutPage.vue'
-import CombimacProject from './components/CombimacProject.vue'
+import CombimacProject from './components/projects/CombimacProject.vue'
 
 const routes = [
     { path: '/about', component: AboutPage},

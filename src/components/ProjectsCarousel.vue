@@ -19,7 +19,7 @@ export default {
   data() {
     return {
       projects: [
-        { id: 1, title: 'Combimac', categories: ['en groupe', 'exposition', 'web'], imageSrc: '/assets/img/combimac.jpg'},
+        { id: 1, title: 'Combimac', categories: ['en groupe', 'exposition', 'web'], imageSrc: 'assets/img/combimac/combimac.jpg'},
         { id: 2, title: 'Projet 2', categories: ['Catégorie 2'], imageSrc: 'https://picsum.photos/200/300' },
         { id: 3, title: 'Projet 3', categories: ['Catégorie 2'], imageSrc: 'https://picsum.photos/200/300' },
         { id: 4, title: 'Projet 4', categories: ['Catégorie 2'], imageSrc: 'https://picsum.photos/200/300' },

@@ -2,6 +2,7 @@
     <main>
       <router-view></router-view> 
     </main>
+    
 </template>
 
 <script>
@@ -45,9 +46,9 @@ h1 {
 h2 {
   font-family: 'Prompt', sans-serif;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 3rem;
   color: #131412;
-  margin: 0;
+  margin: 2% 0;
 }
 
 p {
