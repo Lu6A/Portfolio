@@ -61,5 +61,37 @@ a{
   color: #131412;
 }
 
+/* Barre de défilement */
+::-webkit-scrollbar {
+    width: 12px; /* Largeur de la barre de défilement */
+}
+
+/* Bouton de la barre de défilement */
+::-webkit-scrollbar-thumb {
+    border-radius: 6px; /* Coins arrondis du bouton */
+    background-color : #131412;
+}
+
+/* Zone de la barre de défilement non couverte par le bouton */
+::-webkit-scrollbar-track {
+    background-color: #f6f6f6; /* Couleur de la zone de la barre de défilement */
+}
+
+/* Barre de défilement pour Firefox */
+::-moz-scrollbar {
+    width: 12px; /* Largeur de la barre de défilement */
+}
+
+/* Bouton de la barre de défilement */
+::-moz-scrollbar-thumb {
+    border-radius: 6px; /* Coins arrondis du bouton */
+    background-color : #131412;
+}
+
+/* Zone de la barre de défilement non couverte par le bouton */
+::-moz-scrollbar-track {
+    background-color: #f6f6f6; /* Couleur de la zone de la barre de défilement */
+}
+
 
 </style>

@@ -38,7 +38,7 @@
     <div class = "description">
         <h2>L’EXPOSITION</h2>
         <div class = keywords2>
-        <p>Figma</p> <p>HTML</p> <p>CSS</p> <p>Javascript</p> <p>SQL</p>
+        <p>Figma</p> <p>Illustrator</p>
         </div>
         <p>La nature du public étudiant présente souvent un défi, en particulier lorsqu'il s'agit d'aborder des sujets littéraires. Lors de la création de l'exposition, notre objectif était de susciter l'interaction au maximum. Notre approche consistait à concevoir des structures manipulables pour inciter les visiteurs à s'arrêter et à explorer le monde de la littérature combinatoire avec ses nombreuses possibilités.
         Ainsi, nous avons offert aux visiteurs la possibilité de faire tourner des roues, de manipuler des cubes pivotants, de résoudre une enquête policière en utilisant des fils sur un grand tableau, de participer à une "chasse au trésor" dans la bibliothèque, et de découvrir divers autres objets en papier à manipuler et à afficher.
@@ -48,19 +48,19 @@
     </div>
     </section>
 
-    <img src="assets/img/combimac/combimac1.png" alt="combimac7" class = "exposition1" ref="exposition1">
+    <img src="assets/img/combimac/combimac7.jpg" alt="combimac7" class = "exposition1" ref="exposition1">
 
     <div class = "triptych2">
-        <img src="assets/img/combimac/combimac1.png" alt="combimac8">
-        <img src="assets/img/combimac/combimac1.png" alt="combimac9">
-        <img src="assets/img/combimac/combimac1.png" alt="combimac10">
+        <img src="assets/img/combimac/combimac8.png" alt="combimac8">
+        <img src="assets/img/combimac/combimac9.png" alt="combimac9">
+        <img src="assets/img/combimac/combimac10.png" alt="combimac10">
     </div>
 
-    <img src="assets/img/combimac/combimac1.png" alt="combimac11" class = "banner">
+    <img src="assets/img/combimac/combimac11.jpg" alt="combimac11" class = "banner">
 
     <div class = "duet">
-        <img src="assets/img/combimac/combimac1.png" alt="combimac12">
-        <img src="assets/img/combimac/combimac1.png" alt="combimac13">
+        <img src="assets/img/combimac/combimac12.jpg" alt="combimac12" ref="duet">
+        <img src="assets/img/combimac/combimac13.jpg" alt="combimac13">
     </div>
 
     <img src="assets/img/combimac/combimac3.png" alt="combimac3" class="combimacPhone" :style = "{'top' : combimacPhonePosY + 'px', 'left' : combimacPhonePosX + 'px', 'height' : combimacPhoneHeight + 'px'}">
@@ -68,7 +68,7 @@
     <div class="backgroundRectangle1" :style = "{'top' : videoCenter + 'px', 'height': backgroundRectangle1Height + 'px'}"></div>
     <div class="backgroundRectangle2" :style = "{'top' : exposition1Center + 'px','height': backgroundRectangle2Height + 'px' }"></div>
 
-    <FooterPage/>
+    <FooterPage ref = "footer"/>
 
 </template>
 
@@ -101,6 +101,7 @@ export default {
         triptychCenter : 0,
         exposition1Center : 0,
         backgroundRectangle1Height : 0,
+        backgroundRectangle2Height : 0,
         combimacPhonePosY : 0,
         combimacPhonePosX : 0,
         combimacPhoneHeight : 0,
@@ -125,11 +126,12 @@ export default {
 
         this.$refs.exposition1.onload = () => {
             this.exposition1Center = this.$refs.exposition1.getBoundingClientRect().top + window.scrollY + this.$refs.exposition1.offsetHeight/2;
-            this.backgroundRectangle2Height = document.documentElement.scrollHeight - this.exposition1Center;
         };
-
         
-
+        this.$refs.duet.onload = () => {
+            this.backgroundRectangle2Height = document.body.scrollHeight - this.exposition1Center;
+        };
+        
         window.addEventListener('resize', this.handleResize);
     }   
 }
@@ -239,7 +241,7 @@ iframe {
 
 .triptych2 img{
     width : 30%;
-    aspect-ratio: 1/1.19;
+    height : auto;
     object-fit: cover;
 }
 
@@ -258,7 +260,7 @@ iframe {
 }
 .duet img{
     width : 45%;
-    aspect-ratio: 1/1.19;
+    aspect-ratio: 1/1.2;
     object-fit: cover;
 }
 
@@ -285,6 +287,10 @@ iframe {
     width: 100%;
     background-color: var(--projectColor) ;
     z-index: -1; 
+}
+
+::-webkit-scrollbar-thumb, ::-moz-scrollbar-thumb {
+    background-color : #79C9D8; /* Coins arrondis du bouton */
 }
 
 </style>
