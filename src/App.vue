@@ -20,6 +20,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,600;9..40,700&family=Inter:wght@400;500;700;900&family=Prompt:wght@700;800&display=swap');
 
 html {
+  font-size : 16px;
   height: 100vh;
   background-color: #f6f6f6;
 }
@@ -37,7 +38,7 @@ body {
 h1 {
   font-family: 'Prompt', sans-serif;
   font-weight: 800;
-  font-size: 4rem;
+  font-size: 4em;
   text-transform: uppercase;
   color: #131412;
   margin: 0;
@@ -46,7 +47,7 @@ h1 {
 h2 {
   font-family: 'Prompt', sans-serif;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 3em;
   color: #131412;
   margin: 2% 0;
 }
