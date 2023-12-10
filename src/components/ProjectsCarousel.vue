@@ -21,7 +21,7 @@ export default {
       projects: [
         { id: 1, title: 'Combimac', categories: ['exposition','UX/UI','web'], imageSrc: 'assets/img/combimac/combimac.jpg'},
         { id: 2, title: 'Keycube', categories: ['UX/UI', 'web'], imageSrc: 'assets/img/keycube/keycube.png' },
-        { id: 3, title: 'Projet 3', categories: ['Catégorie 2'], imageSrc: 'https://picsum.photos/200/300' },
+        { id: 3, title: 'Mikii', categories: ['communication','UX/UI'], imageSrc: 'assets/img/mikii/mikii.png'},
         { id: 4, title: 'Projet 4', categories: ['Catégorie 2'], imageSrc: 'https://picsum.photos/200/300' },
         { id: 5, title: 'Projet 5', categories: ['Catégorie 2'], imageSrc: 'https://picsum.photos/200/300' },
         { id: 6, title: 'Projet 6', categories: ['Catégorie 2'], imageSrc: 'https://picsum.photos/200/300' },
