@@ -59,7 +59,7 @@ button:hover svg path {
 }
   .button-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
   }
 

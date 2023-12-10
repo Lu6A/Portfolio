@@ -64,6 +64,7 @@ export default {
     .imgContainer img {
         width : 100%;
         height : 100%;
+        object-fit : cover;
         transform-origin: center center;
         -webkit-transform: scale(1);
         transform: scale(1);

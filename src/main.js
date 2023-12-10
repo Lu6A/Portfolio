@@ -7,12 +7,15 @@ import AboutPage from './components/AboutPage.vue'
 import CombimacProject from './components/projects/CombimacProject.vue'
 import KeycubeProject from './components/projects/KeycubeProject.vue'
 import MikiiProject from './components/projects/MikiiProject.vue'
+import RickAndMortyProject from './components/projects/RickAndMortyProject.vue'
 
 const routes = [
     { path: '/about', component: AboutPage},
     { path: '/Combimac', component: CombimacProject},
     { path: '/Keycube', component: KeycubeProject},
     { path: '/Mikii', component: MikiiProject},
+    { path: '/Rick and Morty API', component: RickAndMortyProject},
+    {path: '/Rick%20and%20Morty%20API', component: RickAndMortyProject},
     { path: '/' , component: HomePage },
 ]
 
