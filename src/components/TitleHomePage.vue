@@ -53,6 +53,7 @@ export default {
     font-size: 1.625rem; 
     color: transparent;
     -webkit-text-stroke: 1px rgba(234, 89, 25, 1);
+    
 }
 
 .welcome {
