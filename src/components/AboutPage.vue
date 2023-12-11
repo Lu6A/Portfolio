@@ -1,6 +1,12 @@
 <template>
     <NavBar/>
     <PostItComponent :style = "{'background-color' : '#79C9D8'}"/>
+    <PostItComponent :style = "{'background-color' : '#EA5919'}"/>
+    <PostItComponent :style = "{'background-color' : '#FBBC19'}"/>
+    <PostItComponent :style = "{'background-color' : '#E61B70'}"/>
+    <PostItComponent :style = "{'background-color' : '#5E4A99'}"/>
+    <PostItComponent :style = "{'background-color' : '#79C9D8'}"/>
+    <PostItComponent :style = "{'background-color' : '#EA5919'}"/>
     <div class = "presentationContainer">
         <div class = "textContainer">
         <h1>BONJOUR,</h1>
