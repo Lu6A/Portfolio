@@ -27,7 +27,7 @@ export default {
 <style scoped>
 
 .navBar {
-    margin: 0 3% 25vh 3%;
+    margin: 4vh 3% 25vh 3%;
     display : flex;
     justify-content : space-between;
     align-items : center;
