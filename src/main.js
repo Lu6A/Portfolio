@@ -10,6 +10,7 @@ import MikiiProject from './components/projects/MikiiProject.vue'
 import RickAndMortyProject from './components/projects/RickAndMortyProject.vue'
 import HacktivistsProject from './components/projects/HacktivistsProject.vue'
 import SchoolMouvProject from './components/projects/SchoolMouvProject.vue'
+import ThePasswordGameProject from './components/projects/ThePasswordGameProject.vue'
 
 
 const routes = [
@@ -21,6 +22,8 @@ const routes = [
     {path: '/Rick%20and%20Morty%20API', component: RickAndMortyProject},
     { path: '/Hacktivists', component: HacktivistsProject},
     {path: '/SchoolMouv', component: SchoolMouvProject},
+    {path : '/The%20Password%20Game', component: ThePasswordGameProject},
+    {path : '/The Password Game', component: ThePasswordGameProject},
     { path: '/' , component: HomePage },
 ]
 

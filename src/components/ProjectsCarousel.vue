@@ -25,7 +25,7 @@ export default {
         { id: 4, title: 'Rick and Morty API', categories: ['web'], imageSrc: 'assets/img/rickAndMorty/rick.jpg'},
         { id: 5, title: 'Hacktivists', categories: ['audiovisuel', '3D'], imageSrc: 'https://picsum.photos/200/300' },
         { id: 6, title: 'SchoolMouv', categories: ['UX/UI'], imageSrc: 'https://picsum.photos/200/300' },
-        { id: 7, title: 'Projet 7', categories: ['Catégorie 2'], imageSrc: 'https://picsum.photos/200/300' },
+        { id: 7, title: 'The Password Game', categories: ['web', 'game'], imageSrc: 'https://picsum.photos/200/300' },
         // { id: 8, title: 'Projet 8', categories: 'Catégorie 8', imageSrc: 'https://picsum.photos/200/300' },
         // { id: 9, title: 'Projet 9', categories: 'Catégorie 9', imageSrc: 'https://picsum.photos/200/300' },
         // { id: 10, title: 'Projet 10', categories: 'Catégorie 10', imageSrc: 'https://picsum.photos/200/300' },
