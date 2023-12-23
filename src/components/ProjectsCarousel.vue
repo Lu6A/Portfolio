@@ -23,7 +23,7 @@ export default {
         { id: 2, title: 'Keycube', categories: ['UX/UI', 'web'], imageSrc: 'assets/img/keycube/keycube.png' },
         { id: 3, title: 'Mikii', categories: ['communication','UX/UI'], imageSrc: 'assets/img/mikii/mikii.png'},
         { id: 4, title: 'Rick and Morty API', categories: ['web'], imageSrc: 'assets/img/rickAndMorty/rick.jpg'},
-        { id: 5, title: 'Hacktivists', categories: ['audiovisuel', '3D'], imageSrc: 'https://picsum.photos/200/300' },
+        { id: 5, title: 'Hacktivists', categories: ['audiovisuel', '3D'], imageSrc: 'assets/img/Hacktivists/hack.png' },
         { id: 6, title: 'SchoolMouv', categories: ['UX/UI'], imageSrc: 'https://picsum.photos/200/300' },
         { id: 7, title: 'The Password Game', categories: ['web', 'game'], imageSrc: 'https://picsum.photos/200/300' },
         // { id: 8, title: 'Projet 8', categories: 'Catégorie 8', imageSrc: 'https://picsum.photos/200/300' },

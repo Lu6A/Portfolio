@@ -1,24 +1,24 @@
 <template>
+    <NavBar/>
     <ProjectPresentation :project="project"/>
-    <div class="videoContainer">
+    <div class="video-container">
       <iframe
         :src="'https://youtube.com/embed/v99aoiWDbmM'"
         frameborder="0"
         allowfullscreen
         ref="video"
       ></iframe>
-      <div class="backgroundRectangle rect1"></div>
+      <div class="background-rectangle rect1"></div>
     </div>
     <section>
     <div class = "description">
-        <h2>DU BLABLA</h2>
+        <h2>LE TITLE SEQUENCE</h2>
         <div class = keywords>
-        <p>Figma</p> <p>HTML</p> <p>CSS</p> <p>Javascript</p> <p>SQL</p>
+        <p>Blender</p> <p>Premiere Pro</p> <p>After Effects</p> <p>Photoshop</p>
         </div>
-        <p>Le site internet permet de pérenniser les oeuvres des étudiants, ainsi que notre exposition.
-        Conçu et et codé entièrement par notre groupe, il offre la possibilité de jouer avec les textes, combinés grâce à l’aléatoire, mais aussi retrouver des informations sur le mouvement de l’Oulipo, des photos de l’exposition et des liens vers les créations personnelles des étudiants apprentis écrivains autour de leurs textes.
+        <p>Le choix de la technique étant libre, nous avons opté pour une approche ambitieuse en combinant la 3D et la prise de vue réelle. Nos principales sources d'inspiration étaient les séquences d'ouverture des séries La Casa de Papel, qui projette des textes sur les maquettes blanches des bâtiments, et Narcos, qui superpose des textes sur des images d'archives.
         </p><br><br><br>
-        <p>Nous avons établi une connexion entre le monde physique et le numérique en visiteurs à contribuer en projetant des vers sur le mur d'un simple clic. Ces vers vagabondaient dans l'espace, permettant une lecture libre qui dépendait de la trajectoire du regard, s'inspirant ainsi du concept des "Bristols" du poète Frédéric Forte. En conséquence, chaque visiteur avait la possibilité de découvrir un poème unique.</p>
+        <p>L'utilisation de la 3D nous a permis d'évoquer des lieux emblématiques des gouvernements américain et chinois, avec la possibilité d'y superposer des textes de manière immersive. À l'exception de deux extraits issus d'une banque d'images, l'ensemble des séquences a été tourné par notre équipe. En tant que responsable du montage, j'ai travaillé sur l'assemblage de ces séquences en les synchronisant avec une musique originale spécialement composée pour l'occasion.</p>
     </div>
     </section>
         <div class = "slider">
@@ -51,11 +51,13 @@
 </template>
 
 <script>
+import NavBar from '../NavBar.vue';
 import ProjectPresentation from '../ProjectPresentation.vue';
 import FooterPage from '../FooterPage.vue';
 export default {
     name: 'HacktivistsProject',
     components: {
+        NavBar,
         ProjectPresentation,
         FooterPage
     },
@@ -65,9 +67,8 @@ export default {
                 id : 5,
                 title: 'Hacktivists',
                 color : '#C3E4EE',
-                categories : ['audiovisuel', '3D'],
-                description: 'Hacktivists is a web application that allows users to create and join events. The application is built with Vue.js, Node.js, Express.js, MongoDB, and Bootstrap.',
-                link: 'https://hacktivists.herokuapp.com/',
+                categories : ['audiovisuel', 'prise de vue réelle','3D'],
+                description: "'Hacktivists' est un projet conçu dans le cadre du cours de langue et compréhension du cinéma au sein du programme d'IMAC2. Réalisé en collaboration avec mes camarades Nina Grignola et Keziah Apaloo-Kingslove, ce projet nous a conduit à imaginer un long métrage complet. Notre tâche comprenait la création d'un synopsis détaillé, la sélection d'un casting, la constitution d'une équipe technique, et enfin, la concrétisation de la séquence d'ouverture du film. L'intrigue que nous avons développée se déroule en 2028, au cours d'une guerre ouverte opposant les États-Unis et la Chine. Un groupe de hackers prend pour cible les politiciens des deux nations, avec pour objectif de dévoiler leurs secrets les plus sombres afin de discréditer les gouvernements des deux côtés.",
                 class : 'noLink',   
             }
     };
@@ -106,7 +107,7 @@ img {
     border-radius : 1em;
 }
 
-.videoContainer {
+.video-container {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -130,7 +131,7 @@ iframe {
     column-gap: 2%;
 }
 
-.backgroundRectangle {
+.background-rectangle {
     width: 100%;
     position: absolute;
     z-index: -1;

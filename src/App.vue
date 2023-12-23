@@ -63,7 +63,7 @@ a{
 
 /* Barre de défilement */
 ::-webkit-scrollbar {
-    width: 12px; /* Largeur de la barre de défilement */
+    width: 10px; /* Largeur de la barre de défilement */
 }
 
 /* Bouton de la barre de défilement */
@@ -79,7 +79,7 @@ a{
 
 /* Barre de défilement pour Firefox */
 ::-moz-scrollbar {
-    width: 12px; /* Largeur de la barre de défilement */
+    width: 10px; /* Largeur de la barre de défilement */
 }
 
 /* Bouton de la barre de défilement */
