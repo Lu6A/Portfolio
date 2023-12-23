@@ -79,4 +79,9 @@ footer {
     align-items: center;
 }
 
+a:hover {
+    transform: scale(1.2);
+    transition : ease 0.2s;
+}
+
 </style>
