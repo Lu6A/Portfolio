@@ -2,11 +2,13 @@
     <NavBar/>
     <ProjectPresentation :project="project"/>
     <section>
-        <h2>DETAILS TECHNIQUES</h2>
+        <h2>LA REFLEXION UX</h2>
         <div class = "keywords" :style = "{'color' : '#f6f6f6'}">
-        <p>Vue JS</p>
+        <p>Figma</p>
+        <p>Excalidraw</p>
         </div>
-        <p>L'essence de ce projet r</p>
+        <p>
+Voici les différentes étapes de réflexion que nous avons suivies pour mener à bien notre projet. Tout d'abord, nous avons élaboré et diffusé un guide d'entretien auprès des élèves de notre entourage. En regroupant les réponses dans une carte d'affinité, nous avons identifié les éléments récurrents, ceux qui étaient les plus représentatifs des besoins des utilisateurs. À partir de ces informations, nous avons créé un persona et une expérience map afin de mieux comprendre notre public cible. En parallèle, nous avons réfléchi au minimum viable product pour prioriser les éléments essentiels de notre application. Enfin, munis des données recueillies au cours des premières étapes, nous avons élaboré les userflows et les wireframes de notre maquette.</p>
         <div class = "background-rectangle"></div>
     </section>
     <div class = gallery>
@@ -22,11 +24,11 @@
     </div>
 
     <section>
-        <h2>DETAILS TECHNIQUES</h2>
+        <h2>LA MAQUETTE</h2>
         <div class = "keywords" :style = "{'color' : '#AFD818'}">
-        <p>Vue JS</p>
+        <p>Figma</p>
         </div>
-        <p>L'essence de ce projet r</p>
+        <p>En ce qui concerne la conception de l'interface utilisateur (UI), notre objectif était de créer une esthétique moderne, lumineuse et séduisante pour contraster avec le site web vieillissant de notre université. Nous avons opté pour une teinte verte pomme comme couleur principale, symbolisant la fraîcheur, la vitalité, l'énergie et la jeunesse. Parallèlement, nous avons arrondi tous les angles pour instiller une sensation de convivialité et de tranquillité, visant à rassurer les étudiants quant à la préparation de leur mobilité, qui s'avère stressante pour beaucoup.</p>
     </section>
 
     <div class = "quartet">
@@ -67,7 +69,7 @@ export default {
                 title: 'SchoolMouv',
                 color : '#AFD818',
                 categories : ['communication', 'UX/UI'],
-                description: `Lors de mon stage de deuxième année de formation IMAC, j'ai rejoins MIKII, une entreprise dynamique spécialisée dans le développement de sites internet e-commerce sous le CMS Magento. Ma mission consistait à contribuer à six points stratégiques visant à refaçonner l'image et la communication de l'entreprise. Ces objectifs incluaient le réalignement de la communication interne, l'amélioration de la valeur perçue par les prospects et clients, la démonstration de l'indispensabilité de MIKII pour ses clients, l'attraction de nouveaux talents et la visibilité accrue sur les réseaux sociaux. En l'espace de deux mois, ce stage m'a offert une immersion complète dans les coulisses d'une agence web en pleine transition.`,
+                description: "SchoolMouv représente un projet élaboré dans le cadre du cours d'UX/UI design de ma formation IMAC. En équipe de quatre personnes, notre mission consistait à conceptualiser l'expérience utilisateur complète d'un projet que nous avions imaginé. Nous avons suivi toutes les étapes de réflexion nécessaires pour élaborer la maquette d'un produit au design intuitif, répondant aux attentes de clients potentiels. Notre choix s'est porté sur le développement d'une application mobile visant à simplifier l'organisation d'un échange scolaire à l'étranger.",
                 class : 'noLink',
             },
             images : [{src: "assets/img/schoolmouv/interview.png", alt: "guide d'interview", description: "guide d'interview"},
@@ -119,10 +121,10 @@ export default {
     window.addEventListener('click', this.handleUserInteraction);
 },
 
-// unmounted() {
-//     window.removeEventListener('scroll', this.handleScroll);
-//   window.removeEventListener('click', this.handleUserInteraction);
-// }
+unmounted() {
+  window.removeEventListener('scroll', this.handleScroll);
+  window.removeEventListener('click', this.handleUserInteraction);
+}
 
 }
 
@@ -169,7 +171,7 @@ img {
 .background-rectangle
 {
     width : calc(100vw - 12px);
-    height : 450%;
+    height : 325%;
     position : absolute;
     z-index : -1;
     top : calc(-30%);

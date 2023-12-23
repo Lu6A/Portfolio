@@ -127,7 +127,7 @@ img {
 
     .rect1 {
         top : calc(-10%);
-        height : 225%;
+        height : 220%;
     }
 
     .credits {
