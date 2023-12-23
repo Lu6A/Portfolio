@@ -2,21 +2,20 @@
     <NavBar/>
     <ProjectPresentation :project="project"/>
     <div class = video-container>
-        <video ref = "video" src = "assets/img/passwordgame/gameplay.mp4" controls loop></video>
+        <video ref = "video" src = "assets/img/passwordgame/gameplay1.mp4" controls loop></video>
         <div class = background-rectangle></div>
     </div>
 
     <section>
         <h2>DETAILS TECHNIQUES</h2>
         <div class = "keywords" :style = "{'color' : '#f6f6f6'}">
-        <p>Vue JS</p>
-        <p>Node JS</p>
-        <p>Socket IO</p>
+        <p>VueJS</p>
         <p>HTML</p>
         <p>CSS</p>
         <p>JavaScript</p>
         </div>
-        <p>L'essence de ce projet réside dans la communication entre les joueurs. Pour cela, j'ai utilisé la librairie Socket IO qui permet de créer des sockets entre les joueurs. Ainsi, les joueurs peuvent communiquer entre eux en temps réel. J'ai également utilisé Vue JS pour la partie front-end et Node JS pour la partie back-end. Le jeu est disponible en français et en anglais.</p>
+        <p>
+L'essence du jeu repose sur l'utilisation des expressions régulières en JavaScript, que nous avons découvertes lors de notre cours et que nous souhaitions maîtriser de manière concrète. De plus, le jeu intègre deux API REST, Sunrise & Sunset et Spotify, pour incorporer des éléments externes et enrichir l'expérience. Cela signifie que le joueur doit parfois quitter l'application pour rechercher les informations requises, ajoutant ainsi une dimension interactive à l'expérience globale.</p>
     </section>
 
     <div class = "duet">
@@ -44,10 +43,10 @@ export default {
             userInteracted: false,
             project : {
                 id : 7,
-                title : "The Password Game",
+                title : "The Password Game 2.0",
                 color : "#6585A0",
                 categories : ["game", "web"],
-                description : "The Password Game est un jeu de société qui se joue à partir de 4 joueurs. Le but du jeu est de faire deviner un mot à son coéquipier en donnant des indices. Le jeu se joue en 3 manches. Chaque manche a une durée de 1 minute 30. Le jeu est disponible en français et en anglais.",
+                description : "Le jeu ''The Password Game 2.0 (pour ceux qui n'auraient pas réussi à résoudre The Password Game, le vrai)'' est un projet réalisé dans le cadre du cours de conception et programmation de sites web au cours de mon semestre d'études à l'Université du Québec à Chicoutimi. En collaboration avec ma camarade Nina Grignola, nous avons bénéficié d'une liberté créative pour ce projet, à condition d'appliquer les notions apprises en cours. Toutes deux amatrices du jeu ''The Password Game'', nous nous sommes lancé le défi de le reproduire en y ajoutant nos propres règles, dans le but de proposer un jeu qui puisse être résolu avec succès, contrairement à son ''grand frère''.",
                 link : "https://github.com/grignolanina/UQAC_PROGRAMMATION_WEB_PROJET",
                 textButton : "Voir le projet sur Github",
             }

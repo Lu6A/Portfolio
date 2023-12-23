@@ -22,8 +22,8 @@ const routes = [
     {path: '/Rick%20and%20Morty%20API', component: RickAndMortyProject},
     { path: '/Hacktivists', component: HacktivistsProject},
     {path: '/SchoolMouv', component: SchoolMouvProject},
-    {path : '/The%20Password%20Game', component: ThePasswordGameProject},
-    {path : '/The Password Game', component: ThePasswordGameProject},
+    {path : '/The%20Password%20Game%202.0', component: ThePasswordGameProject},
+    {path : '/The Password Game 2.0', component: ThePasswordGameProject},
     { path: '/' , component: HomePage },
 ]
 
