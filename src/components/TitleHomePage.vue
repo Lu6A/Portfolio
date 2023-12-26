@@ -1,8 +1,10 @@
 <template>
 <div class = "title-container">
 <p class="name">LUCIE AUGIER - PORTFOLIO 2023</p>
-<div class="hello-container"><p class="hello">HELLO !</p></div>
+<div class = "welcome-container">
 <p class="welcome">BIENVENUE <br> SUR MON PORTFOLIO</p>
+<div class="hello-container"><p class="hello">HELLO !</p></div>
+</div>
 </div>
 </template>
 
@@ -18,36 +20,28 @@ export default {
 <style scoped>
 
 .title-container {
-    margin-left : 2vw;
-    overflow: hidden;
-    display : grid;
-    grid-template-columns: min-content auto;
-    grid-template-rows: min-content 1fr;
-    grid-template-areas: 
-    "name name" 
-    "hello welcome";
+    position : relative;
+
 }
 .name {
-    grid-area: name;
-    margin : 0 0 1% 0;
     font-family: 'Inter', sans-serif;
     font-weight: 400; /*regular*/
     font-size: 1rem;
 }
 
-.hello-container {
-    grid-area: hello;
-    /* place-self :start; */
-    width: fit-content;
-    height: fit-content;
-    margin : 0;
+.welcome-container {
     position : relative;
 }
-.hello {
+
+
+.hello-container {
     position : absolute;
-    margin : 0;
+    top : calc(33%);
+    left :calc(-4%);
+}
+.hello {
     white-space: nowrap;
-    transform: rotate(-90deg) translate(-40%, -90%);
+    transform: rotate(-90deg);
     font-family: 'Prompt', sans-serif;
     font-weight: 800; /*extrabold*/
     font-size: 1.625rem; 
@@ -57,8 +51,6 @@ export default {
 }
 
 .welcome {
-    grid-area: welcome;
-    margin: 0 0 0 4%;
     font-family: 'Prompt', sans-serif;
     font-weight: 800;
     font-size: 3rem;

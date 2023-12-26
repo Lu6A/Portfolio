@@ -1,12 +1,22 @@
 <template>
-<div class="home-page">
+<!-- <div class="home-page">
     <TitleHomePage class="title"/>
     <div class="buttons">
         <ButtonGeneric/>
         <ButtonGeneric/>
     </div>
     <ProjectsCarousel class="projects"/>  
+</div> -->
+
+<div class = navbar>
+    <TitleHomePage/>
+    <div class = "buttons">
+        <ButtonGeneric/>
+        <ButtonGeneric/>
+    </div>
 </div>
+    <ProjectsCarousel class = "projects"/>
+
 </template>
 
 
@@ -28,7 +38,22 @@ export default {
 
 
 <style>
-.home-page {
+
+.navbar {
+    height : 20%;
+    width : 100%;
+    display : flex;
+    justify-content : space-around;
+    align-items : center;
+    
+}
+
+/* .projects {
+    height : 80%;
+    width : 100%;
+} */
+
+/* .home-page {
     height: 100%;   
     width: 100%;
     margin-right : 3%;
@@ -38,21 +63,18 @@ export default {
     grid-template-areas: 
     "title buttons ." 
     "projects projects projects";
-}
+} */
 
-.title {
+/* .title {
     grid-area: title;
-}
+} */
 
-.buttons {
+/* .buttons {
     grid-area: buttons;
     justify-self: end;
     display : flex;
     column-gap : 10%;
-}
+} */
 
-.projects {
-    grid-area: projects;
-}
 
 </style>
