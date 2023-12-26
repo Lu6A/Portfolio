@@ -21,6 +21,7 @@ export default {
 
 .title-container {
     position : relative;
+    padding-left : 3%;
 
 }
 .name {
@@ -37,7 +38,7 @@ export default {
 .hello-container {
     position : absolute;
     top : calc(33%);
-    left :calc(-4%);
+    left :calc(-13%);
 }
 .hello {
     white-space: nowrap;
