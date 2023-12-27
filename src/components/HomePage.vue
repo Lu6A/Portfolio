@@ -27,7 +27,14 @@ export default {
     TitleHomePage,
     ButtonGeneric,
     ProjectCard
-}
+  },
+  data() {
+    return {
+      projects: [
+        {
+          id: 1,
+          title: 'Project 1',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies al
 }
 </script>
 
@@ -47,6 +54,19 @@ export default {
     padding-right : 3%;
     display : flex;
     column-gap : 10%;
+}
+
+.sliderWrap {
+    margin-top : 3vh;
+    height : 77vh;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+}
+
+.slider {
+    height : 100%;
+    display: flex;
 }
 
 /* .projects {
