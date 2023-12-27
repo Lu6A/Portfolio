@@ -40,12 +40,18 @@ export default {
 <style>
 
 .navbar {
-    height : 20%;
+    margin-top : 3vh;
+    height : 17vh;
     width : 100%;
     display : flex;
-    justify-content : space-around;
-    align-items : center;
-    
+    justify-content : space-between;
+    align-items : start;
+}
+
+.buttons {
+    padding-right : 3%;
+    display : flex;
+    column-gap : 10%;
 }
 
 /* .projects {
