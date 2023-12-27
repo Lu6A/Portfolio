@@ -1,29 +1,24 @@
 <template>
-<!-- <div class="home-page">
-    <TitleHomePage class="title"/>
-    <div class="buttons">
-        <ButtonGeneric/>
-        <ButtonGeneric/>
-    </div>
-    <ProjectsCarousel class="projects"/>  
-</div> -->
-
-<div class = navbar>
-    <TitleHomePage/>
-    <div class = "buttons">
-        <ButtonGeneric/>
-        <ButtonGeneric/>
-    </div>
-</div>
-    <ProjectsCarousel class = "projects"/>
-
+  <div class = navbar>
+      <TitleHomePage/>
+      <div class = "buttons">
+          <ButtonGeneric/>
+          <ButtonGeneric/>
+      </div>
+  </div>
+      <div class="slider-wrap" ref="sliderWrap">
+        <div class="slider">
+          <div class="slider-item" v-for="project in projects" :key="project.id">
+            <ProjectCard :project="project" class="card" />
+          </div>
+        </div>
+      </div>
 </template>
-
 
 <script>
 import TitleHomePage from './TitleHomePage.vue';
 import ButtonGeneric from './ButtonGeneric.vue';
-import ProjectsCarousel from './ProjectsCarousel.vue';
+import ProjectCard from './ProjectCard.vue';
 
 
 export default {
@@ -31,7 +26,7 @@ export default {
     components: {
     TitleHomePage,
     ButtonGeneric,
-    ProjectsCarousel
+    ProjectCard
 }
 }
 </script>
