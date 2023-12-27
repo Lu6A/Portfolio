@@ -28,6 +28,7 @@ export default {
     font-family: 'Inter', sans-serif;
     font-weight: 400; /*regular*/
     font-size: 1rem;
+    margin-left : -5%;
 }
 
 .welcome-container {

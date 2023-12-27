@@ -39,7 +39,8 @@ export default {
     },
     data() {
         return {
-        sliderSpeed : "10s",
+        isScrolling: false,
+        sliderSpeed : "40s",
         projects: [
         { id: 1, title: 'Combimac', categories: ['exposition','UX/UI','web'], imageSrc: 'assets/img/combimac/combimac.jpg'},
         { id: 2, title: 'Keycube', categories: ['UX/UI', 'web'], imageSrc: 'assets/img/keycube/keycube.png' },
@@ -53,12 +54,29 @@ export default {
     },
     methods: {
         handleScroll(event) {
-            //créé un scroll horizontal infini pour le sliderWrap
             const sliders = this.$refs.sliderWrap.querySelectorAll('.slider');
-            sliders.scrollLeft += event.deltaY;
-            
-        }
+
+if (!this.isScrolling) {
+  this.isScrolling = true;
+  this.scrollDelta = event.deltaY;
+
+  sliders.forEach((slider) => {
+    slider.style.transition = 'none';
+    slider.style.transform = `translateX(${this.scrollDelta}px)`;
+  });
+}
+
+clearTimeout(this.scrollEndTimeout);
+this.scrollEndTimeout = setTimeout(() => {
+  sliders.forEach((slider) => {
+    slider.style.transition = 'transform linear';
+    slider.style.transform = 'translateX(0)';
+  });
+
+  this.isScrolling = false;
+}, 200); 
     }
+}
 }
 </script>   
 
@@ -107,33 +125,7 @@ export default {
   }
 }
 
-/* .projects {
-    height : 80%;
-    width : 100%;
-} */
 
-/* .home-page {
-    height: 100%;   
-    width: 100%;
-    margin-right : 3%;
-    display : grid;
-    grid-template-columns: auto auto 2vw;
-    grid-template-rows: min-content 1fr;
-    grid-template-areas: 
-    "title buttons ." 
-    "projects projects projects";
-} */
-
-/* .title {
-    grid-area: title;
-} */
-
-/* .buttons {
-    grid-area: buttons;
-    justify-self: end;
-    display : flex;
-    column-gap : 10%;
-} */
 
 
 </style>
