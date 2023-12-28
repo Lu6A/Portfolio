@@ -1,4 +1,5 @@
 <template>
+  <div class = "home-page">
   <div class = navbar>
       <TitleHomePage/>
       <div class = "buttons">
@@ -8,11 +9,12 @@
   </div>
       <div class="slider-wrap" ref="sliderWrap">
         <div class="slider">
-          <div class="slider-item" v-for="project in projects" :key="project.id">
+          <div class="slider-item" v-for="project in duplicatedProjects" :key="project.id">
             <ProjectCard :project="project" class="card" />
           </div>
         </div>
       </div>
+</div>
 </template>
 
 <script>
@@ -30,20 +32,33 @@ export default {
   },
   data() {
     return {
-      projects: [
-        {
-          id: 1,
-          title: 'Project 1',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies al
-}
+        projects: [
+        { id: 1, title: 'Combimac', categories: ['exposition','UX/UI','web'], imageSrc: 'assets/img/combimac/combimac.jpg'},
+        { id: 2, title: 'Keycube', categories: ['UX/UI', 'web'], imageSrc: 'assets/img/keycube/keycube.png' },
+        { id: 3, title: 'Mikii', categories: ['communication','UX/UI'], imageSrc: 'assets/img/mikii/mikii.png'},
+        { id: 4, title: 'Rick and Morty API', categories: ['web'], imageSrc: 'assets/img/rickAndMorty/rick.jpg'},
+        { id: 5, title: 'Hacktivists', categories: ['audiovisuel', '3D'], imageSrc: 'assets/img/Hacktivists/hack.png' },
+        { id: 6, title: 'SchoolMouv', categories: ['UX/UI'], imageSrc: 'assets/img/SchoolMouv/school.png' },
+        { id: 7, title: 'The Password Game 2.0', categories: ['web', 'game'], imageSrc: 'assets/img/passwordGame/password.png' },  
+        ], 
+        duplicatedProjects: [],
+      }
+    },
+    mounted() {
+      this.duplicatedProjects = [...this.projects, ...this.projects];
+    },
+  }
+
 </script>
 
 
 <style>
 
+
+
 .navbar {
-    margin-top : 3vh;
-    height : 17vh;
+    padding-top : 1%;
+    height : auto;
     width : 100%;
     display : flex;
     justify-content : space-between;
@@ -57,9 +72,7 @@ export default {
 }
 
 .sliderWrap {
-    margin-top : 3vh;
-    height : 77vh;
-    overflow: hidden;
+    height : auto;
     white-space: nowrap;
     display: flex;
 }
@@ -67,35 +80,19 @@ export default {
 .slider {
     height : 100%;
     display: flex;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-/* .projects {
-    height : 80%;
-    width : 100%;
-} */
+/* Remove scrollbar */
+.slider::-webkit-scrollbar {
+    display: none;
+}
 
-/* .home-page {
-    height: 100%;   
-    width: 100%;
-    margin-right : 3%;
-    display : grid;
-    grid-template-columns: auto auto 2vw;
-    grid-template-rows: min-content 1fr;
-    grid-template-areas: 
-    "title buttons ." 
-    "projects projects projects";
-} */
-
-/* .title {
-    grid-area: title;
-} */
-
-/* .buttons {
-    grid-area: buttons;
-    justify-self: end;
-    display : flex;
-    column-gap : 10%;
-} */
-
+/*remove scrollbar for mozilla*/
+.slider {
+    overflow: -moz-scrollbars-none;
+}
 
 </style>
