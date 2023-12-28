@@ -4,18 +4,29 @@
       class="post-it"
       :style="postItStyle"
       @mousedown="startDrag">
-      <p>Contenu du post-it</p>
+      <p>{{contenu}}</p>
     </div>
 </template>
 
 <script>
 export default {
   name: 'PostItComponent',
+  props : {
+    top: {
+      type: String,
+      default: "10px"
+    },
+    left: {
+      type: String,
+      default: "10px"
+    },
+  },
   data() {
     return {
+      contenu : 'hello world !',
       postItStyle: {
-        top: '10px',
-        left: '10px',
+        top: this.top,
+        left: this.left,
       },
       isDragging: false,
       mouseOffset: {
@@ -86,6 +97,11 @@ export default {
 </script>
 
 <style scoped>
+
+p{
+  text-transform : uppercase;
+  font-weight : 700;
+}
 .post-it {
   box-shadow: 3px 3px 40px rgba(70,70,70,0.2);
   width: 150px;
@@ -94,6 +110,9 @@ export default {
   cursor: grab;
   position: absolute;
   z-index: 1;
+  display : flex;
+  justify-content : center;
+  align-items : center;
 }
 
 .post-it:active {

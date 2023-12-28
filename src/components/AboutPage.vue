@@ -1,12 +1,12 @@
 <template>
     <NavBar/>
-    <PostItComponent :style = "{'background-color' : '#79C9D8'}"/>
-    <PostItComponent :style = "{'background-color' : '#EA5919'}"/>
-    <PostItComponent :style = "{'background-color' : '#FBBC19'}"/>
-    <PostItComponent :style = "{'background-color' : '#E61B70'}"/>
-    <PostItComponent :style = "{'background-color' : '#5E4A99'}"/>
-    <PostItComponent :style = "{'background-color' : '#79C9D8'}"/>
-    <PostItComponent :style = "{'background-color' : '#EA5919'}"/>
+    <PostItComponent :style = "{'background-color' : '#79C9D8'}" top="20%" left="50%"/>
+    <PostItComponent :style = "{'background-color' : '#EA5919'}" top="40%" left="60%"/>
+    <PostItComponent :style = "{'background-color' : '#FBBC19'}" top="65%" left="70%"/>
+    <PostItComponent :style = "{'background-color' : '#E61B70'}" top="55%" left="55%"/>
+    <PostItComponent :style = "{'background-color' : '#5E4A99'}" top="25%" left="64%"/>
+    <PostItComponent :style = "{'background-color' : '#79C9D8'}" top="70%" left="61%"/>
+    <PostItComponent :style = "{'background-color' : '#EA5919'}" top="73%" left="49%"/>
     <div class = "presentationContainer">
         <div class = "textContainer">
         <h1>BONJOUR,</h1>
@@ -209,10 +209,6 @@ export default {
         }
     },
     methods : {
-        updatePosition({ top, left }) {
-      this.top = top;
-      this.left = left;
-    },
         // au hover d'un élément de la classe orange, changer la couleur de tous les éléments de la classe orange
         changeColor(color) {
             const elements = document.querySelectorAll(`.${color}`);
@@ -325,8 +321,8 @@ h3{
         font-weight: bold;
         color: #111111;
         color: transparent;
-        -webkit-text-stroke: 1px rgba(121, 201, 216, 1);
-        -moz-text-stroke: 1px rgba(121, 201, 216, 1);
+        -webkit-text-stroke: 3px rgba(121, 201, 216, 1);
+        -moz-text-stroke: 3px rgba(121, 201, 216, 1);
     }
     .picture {
         height: 100%;
@@ -375,15 +371,14 @@ h3{
     justify-content: space-between;
     flex-wrap: wrap;
     width: 80%;
-    margin : 0 auto 10% auto;
+    margin : 0 auto;
 }
 
 .logo-container {
-    margin-bottom : 5%;
     width : 12.5%;
     aspect-ratio: 1;
     box-sizing : border-box;
-    padding: 2%;
+    padding: 3%;
 }
 
 .logo {
