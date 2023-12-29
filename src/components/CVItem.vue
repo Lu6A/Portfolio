@@ -47,7 +47,7 @@ h2{
     font-size : 4em;
     transform : rotate(-90deg);
     position : absolute;
-    top : calc(10%);
+    top : calc(12%);
     left : calc(-20%);
     color: transparent;
     /* -webkit-text-stroke: 1px rgba(121, 201, 216, 1);

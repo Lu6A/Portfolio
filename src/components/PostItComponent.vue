@@ -57,6 +57,7 @@ export default {
     },
 
     drag(event) {
+        console.log('drag')
     event.preventDefault();
     //event.stopPropagation(); 
       if (this.isDragging) {
