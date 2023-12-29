@@ -375,6 +375,11 @@ h3{
     flex-direction: row;
     width: 100%;
     height: 100%;
+    cursor : grab;
+}
+
+.slider:active {
+    cursor : grabbing;
 }
 
 .slider > * {
