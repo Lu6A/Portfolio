@@ -7,8 +7,12 @@
           <ButtonGeneric/>
       </div>
   </div>
-      <div class="slider-wrap" ref="sliderWrap">
-        <div class="slider">
+      <div class="slider-wrap" ref="sliderWrap" 
+      @mousedown="handleMouseDown" 
+      @mousemove="handleMouseMove" 
+      @mouseup="handleMouseUp"
+      @mouseleave="handleMouseUp">
+        <div class="slider" ref="slider">
           <div class="slider-item" v-for="project in duplicatedProjects" :key="project.id">
             <ProjectCard :project="project" class="card" />
           </div>
@@ -42,7 +46,31 @@ export default {
         { id: 7, title: 'The Password Game 2.0', categories: ['web', 'game'], imageSrc: 'assets/img/passwordGame/password.png' },  
         ], 
         duplicatedProjects: [],
+        isDragging: false,
+        startX: 0,
+        scrollLeft: 0,
       }
+    },
+    methods: {
+      handleMouseDown(event) {
+        console.log('handleMouseDown')
+        this.isDragging = true;
+        event.preventDefault();
+        this.startX = event.pageX - this.$refs.sliderWrap.offsetLeft;
+        this.scrollLeft = this.$refs.slider.scrollLeft;
+      },
+      handleMouseMove(event) {
+        console.log('handleMouseMove')
+        if (!this.isDragging) return;
+        event.preventDefault();
+        const x = event.pageX - this.$refs.sliderWrap.offsetLeft;
+        const walk = (x - this.startX) * 2;
+        this.$refs.slider.scrollLeft = this.scrollLeft - walk;
+      },
+      handleMouseUp() {
+        console.log('handleMouseUp')
+        this.isDragging = false;
+      },
     },
     mounted() {
       this.duplicatedProjects = [...this.projects, ...this.projects];

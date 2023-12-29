@@ -17,8 +17,12 @@
         <img src="/assets/img/portraitCV.jpg" alt="photo de Lucie Augier" class="picture">
     </div>
     <h2>et j'ai été à l'école</h2>
-    <div class="slider-wrap">
-    <div class = slider>
+    <div class="slider-wrap" ref="sliderWrap1"    
+        @mousedown="handleMouseDown(1, $event)" 
+        @mousemove="handleMouseMove(1, $event)" 
+        @mouseup="handleMouseUp"
+        @mouseleave="handleMouseUp">
+    <div class = slider ref="slider1">
     <CVItem :item = "{color : '#5E4A99', location : 'Paris', date : '2023', title : 'Ecole de Condé', description : 'Formation en design graphique et digital'}"/>
     <CVItem :item = "{color : '#E61B70', location : 'Paris', date : '2021', title : 'Ecole de Condé', description : 'Formation en design graphique et digital'}"/>
     <CVItem :item = "{color : '#FBBC19', location : 'Paris', date : '2020', title : 'Ecole de Condé', description : 'Formation en design graphique et digital'}"/>
@@ -26,8 +30,12 @@
     </div>
     </div>
     <h2>où j’ai participé à la vie associative</h2>
-    <div class="slider-wrap">
-    <div class = slider>
+    <div class="slider-wrap" ref="sliderWrap2"
+        @mousedown="handleMouseDown(2, $event)" 
+        @mousemove="handleMouseMove(2, $event)" 
+        @mouseup="handleMouseUp"
+        @mouseleave="handleMouseUp">
+    <div class = slider ref="slider2">
     <CVItem :item = "{color : '#5E4A99', location : 'Paris', date : '2023', title : 'Ecole de Condé', description : 'Formation en design graphique et digital'}"/>
     <CVItem :item = "{color : '#E61B70', location : 'Paris', date : '2021', title : 'Ecole de Condé', description : 'Formation en design graphique et digital'}"/>
     <CVItem :item = "{color : '#FBBC19', location : 'Paris', date : '2020', title : 'Ecole de Condé', description : 'Formation en design graphique et digital'}"/>
@@ -35,8 +43,12 @@
     </div>
     </div>
     <h2>j’ai également des expériences professionnelles</h2>
-    <div class="slider-wrap">
-    <div class = slider>
+    <div class="slider-wrap" ref="sliderWrap3"
+        @mousedown="handleMouseDown(3, $event)" 
+        @mousemove="handleMouseMove(3, $event)" 
+        @mouseup="handleMouseUp"
+        @mouseleave="handleMouseUp">
+    <div class = slider ref="slider3">
     <CVItem :item = "{color : '#5E4A99', location : 'Paris', date : '2023', title : 'Ecole de Condé', description : 'Formation en design graphique et digital'}"/>
     <CVItem :item = "{color : '#E61B70', location : 'Paris', date : '2021', title : 'Ecole de Condé', description : 'Formation en design graphique et digital'}"/>
     <CVItem :item = "{color : '#FBBC19', location : 'Paris', date : '2020', title : 'Ecole de Condé', description : 'Formation en design graphique et digital'}"/>
@@ -204,8 +216,11 @@ export default {
     },
     data() {
         return {
-      top: '20px',
-      left: '50px'
+        top: '20px',
+        left: '50px',
+        isDragging: false,
+        startX: 0,
+        scrollLeft: 0,
         }
     },
     methods : {
@@ -262,6 +277,26 @@ export default {
         }
         });
     },
+
+    handleMouseDown(sliderNb, event) {
+        console.log('handleMouseDown')
+        this.isDragging = true;
+        event.preventDefault();
+        this.startX = event.pageX - this.$refs['slider' + sliderNb].offsetLeft;
+        this.scrollLeft = this.$refs['slider' + sliderNb].scrollLeft;
+      },
+      handleMouseMove(sliderNb, event) {
+        console.log('handleMouseMove')
+        if (!this.isDragging) return;
+        event.preventDefault();
+        const x = event.pageX - this.$refs['sliderWrap' + sliderNb].offsetLeft;
+        const walk = (x - this.startX) * 2;
+        this.$refs['slider' + sliderNb].scrollLeft = this.scrollLeft - walk;
+      },
+      handleMouseUp() {
+        console.log('handleMouseUp')
+        this.isDragging = false;
+      },
     },
 
     mounted() {
