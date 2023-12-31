@@ -1,6 +1,6 @@
 <template>
     <div
-      ref="postIt"
+      ref="postIt_"
       class="post-it"
       :style="postItStyle"
       @mousedown="startDrag">
@@ -23,6 +23,7 @@ export default {
   },
   data() {
     return {
+      uniqueId: Math.random().toString(36).substring(2, 9),
       contenu : 'hello world !',
       postItStyle: {
         top: this.top,
@@ -46,23 +47,31 @@ export default {
       this.isDragging = true
       this.velocity.x = 0;
       this.velocity.y = 0;
-      this.mouseOffset.x = event.clientX - this.$refs.postIt.getBoundingClientRect().left;
-      this.mouseOffset.y = event.clientY - this.$refs.postIt.getBoundingClientRect().top;
+      // console.log("Reference:", 'postIt_' + this.uniqueId);
+      // console.log("object : ", this.$refs["postIt_" + this.uniqueId]);
+      this.mouseOffset.x = event.clientX - this.$refs.postIt_.offsetLeft;
+      console.log("mouseOffset.x:", this.mouseOffset.x);
+      this.mouseOffset.y = event.clientY - this.$refs.postIt_.offsetTop;
+
+      document.addEventListener('mouseup', this.stopDrag);
+      document.addEventListener('mousemove', this.drag);
     },
 
     stopDrag() {
         console.log('stopDrag')
       this.isDragging = false
+      document.removeEventListener('mouseup', this.stopDrag);
+      document.removeEventListener('mousemove', this.drag);
       this.applyInertia();
     },
 
     drag(event) {
-        console.log('drag')
+      console.log('drag')
     event.preventDefault();
     //event.stopPropagation(); 
       if (this.isDragging) {
-        this.velocity.x = event.clientX - this.mouseOffset.x - this.$refs.postIt.getBoundingClientRect().left;
-        this.velocity.y = event.clientY - this.mouseOffset.y - this.$refs.postIt.getBoundingClientRect().top;
+        this.velocity.x = event.clientX - this.mouseOffset.x - this.$refs.postIt_.getBoundingClientRect().left;
+        this.velocity.y = event.clientY - this.mouseOffset.y - this.$refs.postIt_.getBoundingClientRect().top;
         this.postItStyle.left = event.clientX - this.mouseOffset.x + 'px'
         this.postItStyle.top = event.clientY - this.mouseOffset.y + 'px'
  
@@ -84,14 +93,6 @@ export default {
       updatePosition();
     }
   },
-  mounted() {
-    document.addEventListener('mouseup', this.stopDrag)
-    document.addEventListener('mousemove', this.drag)
-  },
-  beforeUnmount() {
-    document.removeEventListener('mouseup', this.stopDrag)
-    document.removeEventListener('mousemove', this.drag)
-  }
 }
 
 
