@@ -1,12 +1,12 @@
 <template>
     <NavBar/>
-    <PostItComponent :style = "{'background-color' : '#79C9D8'}" top="20%" left="50%"/>
-    <PostItComponent :style = "{'background-color' : '#EA5919'}" top="40%" left="60%"/>
-    <PostItComponent :style = "{'background-color' : '#FBBC19'}" top="65%" left="70%"/>
-    <PostItComponent :style = "{'background-color' : '#E61B70'}" top="55%" left="55%"/>
-    <PostItComponent :style = "{'background-color' : '#5E4A99'}" top="25%" left="64%"/>
-    <PostItComponent :style = "{'background-color' : '#79C9D8'}" top="70%" left="61%"/>
-    <PostItComponent :style = "{'background-color' : '#EA5919'}" top="73%" left="49%"/>
+    <PostItComponent :style = "{'background-color' : '#79C9D8'}" top="20%" left="50%" contenu="dynamique"/>
+    <PostItComponent :style = "{'background-color' : '#EA5919'}" top="40%" left="60%" contenu="consciencieuse"/>
+    <PostItComponent :style = "{'background-color' : '#FBBC19'}" top="65%" left="70%" contenu="persévérente"/>
+    <PostItComponent :style = "{'background-color' : '#E61B70'}" top="55%" left="55%" contenu="polyvalente"/>
+    <PostItComponent :style = "{'background-color' : '#5E4A99'}" top="25%" left="64%" contenu="ouverte d'esprit"/>
+    <PostItComponent :style = "{'background-color' : '#79C9D8'}" top="70%" left="61%" contenu="sociable"/>
+    <PostItComponent :style = "{'background-color' : '#EA5919'}" top="73%" left="49%" contenu="enthousiaste"/>
     <div class = "presentationContainer">
         <div class = "textContainer">
         <h1>BONJOUR,</h1>

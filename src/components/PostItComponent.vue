@@ -20,11 +20,14 @@ export default {
       type: String,
       default: "10px"
     },
+    contenu : {
+      type : String,
+      default : 'hello world !'
+    }
   },
   data() {
     return {
       uniqueId: Math.random().toString(36).substring(2, 9),
-      contenu : 'hello world !',
       postItStyle: {
         top: this.top,
         left: this.left,
@@ -103,6 +106,7 @@ export default {
 p{
   text-transform : uppercase;
   font-weight : 700;
+  text-align : center;
 }
 .post-it {
   box-shadow: 3px 3px 40px rgba(70,70,70,0.2);
