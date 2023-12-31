@@ -7,6 +7,8 @@
     <PostItComponent :style = "{'background-color' : '#5E4A99'}" top="25%" left="64%" contenu="ouverte d'esprit"/>
     <PostItComponent :style = "{'background-color' : '#79C9D8'}" top="70%" left="61%" contenu="sociable"/>
     <PostItComponent :style = "{'background-color' : '#EA5919'}" top="73%" left="49%" contenu="enthousiaste"/>
+    <PostItComponent :style = "{'background-color' : '#FBBC19'}" top="35%" left="48%" contenu="créative"/>
+    <PostItComponent :style = "{'background-color' : '#E61B70'}" top="43%" left="72%" contenu="autonome"/>
     <div class = "presentationContainer">
         <div class = "textContainer">
         <h1>BONJOUR,</h1>
@@ -23,10 +25,10 @@
         @mouseup="handleMouseUp"
         @mouseleave="handleMouseUp">
     <div class = slider ref="slider1">
-    <CVItem :item = "{color : '#5E4A99', location : 'Paris', date : '2023', title : 'Ecole de Condé', description : 'Formation en design graphique et digital'}"/>
-    <CVItem :item = "{color : '#E61B70', location : 'Paris', date : '2021', title : 'Ecole de Condé', description : 'Formation en design graphique et digital'}"/>
-    <CVItem :item = "{color : '#FBBC19', location : 'Paris', date : '2020', title : 'Ecole de Condé', description : 'Formation en design graphique et digital'}"/>
-    <CVItem :item = "{color : '#EA5919', location : 'Paris', date : '2019', title : 'Ecole de Condé', description : 'Formation en design graphique et digital'}"/>
+    <CVItem :item = "{color : '#EA5919', location : 'Université du Québec à Chicoutimi', year : '2023', date : 'septembre-décembre 2023', title : 'Troisième année de diplôme d’ingénieur IMAC à l’étranger Programmme court d’informatique et de mathématiques', description : 'Conception et programmation de sites web, intelligence artificielle pour le jeu vidéo, gestion de la production dans l’industrie du numérique'}"/>
+    <CVItem :item = "{color : '#EA5919', location : 'ESIEE Paris', year : '2022', date : '2022', title : 'Obtention du TOEIC', description : 'Maîtrise de l\'anglais niveau C1 (960 points)'}"/>
+    <CVItem :item = "{color : '#EA5919', location : 'ESIEE Paris', year : '2021' , date : '2021-2023', title : 'Tronc commun du diplôme d’ingénieur IMAC (Image Multimédia Audiovisuel & Communication)', description : 'Programmation orientée objet, Communication, Développement de sites web, Modélisation 3D et Design d’interface UX/UI'}"/>
+    <CVItem :item = "{color : '#EA5919', location : 'Lycée Pothier, Orléans', year : '2018', date : '2018-2021', title : 'Classe préparatoire aux grandes écoles filière MPSI-MP', description : 'Bagage scientifique solide, autonomie et rigeur'}"/>
     </div>
     </div>
     <h2>où j’ai participé à la vie associative</h2>
@@ -36,10 +38,8 @@
         @mouseup="handleMouseUp"
         @mouseleave="handleMouseUp">
     <div class = slider ref="slider2">
-    <CVItem :item = "{color : '#5E4A99', location : 'Paris', date : '2023', title : 'Ecole de Condé', description : 'Formation en design graphique et digital'}"/>
-    <CVItem :item = "{color : '#E61B70', location : 'Paris', date : '2021', title : 'Ecole de Condé', description : 'Formation en design graphique et digital'}"/>
-    <CVItem :item = "{color : '#FBBC19', location : 'Paris', date : '2020', title : 'Ecole de Condé', description : 'Formation en design graphique et digital'}"/>
-    <CVItem :item = "{color : '#EA5919', location : 'Paris', date : '2019', title : 'Ecole de Condé', description : 'Formation en design graphique et digital'}"/>
+    <CVItem :item = "{color : '#FBBC19', location : 'ESIEE Paris', year : '2022', date : '2022-2023', title : 'Vice présidente de l’association du bureau des IMAC', description : 'Organisation et supervision d’évènements accueillant jusqu’à 200 personnes. Prise de décisions assurant le bon fonctionnement de l’association.'}"/>
+    <CVItem :item = "{color : '#FBBC19', location : 'Lycée Pothier, Orléans', year : '2020', date : '2020-2021', title : 'Membre de l’association Taupe Orléans', description : 'Organisation d’évènements accueillant jusqu’à 800 personnes. Organisation d’animations (vente de pulls,tournois sportifs...)'}"/>
     </div>
     </div>
     <h2>j’ai également des expériences professionnelles</h2>
@@ -49,10 +49,8 @@
         @mouseup="handleMouseUp"
         @mouseleave="handleMouseUp">
     <div class = slider ref="slider3">
-    <CVItem :item = "{color : '#5E4A99', location : 'Paris', date : '2023', title : 'Ecole de Condé', description : 'Formation en design graphique et digital'}"/>
-    <CVItem :item = "{color : '#E61B70', location : 'Paris', date : '2021', title : 'Ecole de Condé', description : 'Formation en design graphique et digital'}"/>
-    <CVItem :item = "{color : '#FBBC19', location : 'Paris', date : '2020', title : 'Ecole de Condé', description : 'Formation en design graphique et digital'}"/>
-    <CVItem :item = "{color : '#EA5919', location : 'Paris', date : '2019', title : 'Ecole de Condé', description : 'Formation en design graphique et digital'}"/>
+    <CVItem :item = "{color : '#79C9D8', location : 'Agence MIKII', year :'2023', date : 'juin - août 2023', title : 'Stage en webdesign', description : 'Refonte du site internet de l’entreprise. Benchmark, design UX/UI'}"/>
+    <CVItem :item = "{color : '#79C9D8', location : 'Paris', year : '2017', date : '2017 à aujourd\'hui' , title : 'Emplois d’été diverses : vente en boulangerie, conditionnement, cueillette', description : 'Formation en design graphique et digital'}"/>
     </div>
     </div>
     <h2>et grâce à cela j'ai acquis des compétences</h2>
@@ -385,7 +383,6 @@ h3{
 .slider > * {
     flex-shrink: 0;
     width: 30%;
-    height: 100%;
     margin: 0 5%;
 }
 
