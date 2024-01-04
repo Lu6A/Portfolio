@@ -27,6 +27,13 @@ html {
 
 body {
   margin : 0;
+  height : 100%;
+  width : 100%;
+}
+
+main  {
+  height : 100%;
+  width : 100%;
 }
 
 #app{
@@ -93,5 +100,17 @@ a{
     background-color: #f6f6f6; /* Couleur de la zone de la barre de défilement */
 }
 
+
+@media screen and (max-width : 1024px) {
+  html {
+    font-size : 12px;
+  }
+}
+
+@media screen and (max-width : 800px) {
+  html {
+    font-size : 8px;
+  }
+}
 
 </style>

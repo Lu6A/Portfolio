@@ -77,4 +77,12 @@ export default {
       transform: scale(1.1);
     }
 
+    @media screen and (max-width : 465px) {
+    .projectCard {
+      margin-top : 5%;
+      width : 100%;
+      height : 20rem;
+    }
+}
+
 </style>

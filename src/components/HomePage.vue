@@ -3,8 +3,8 @@
   <div class = navbar>
       <TitleHomePage/>
       <div class = "buttons">
-          <ButtonGeneric/>
-          <ButtonGeneric/>
+          <ButtonGeneric buttonText = "À propos" buttonClass = "general"/>
+          <ButtonGeneric buttonText = "Contact" buttonClass = "general"/>
       </div>
   </div>
       <div class="slider-wrap" ref="sliderWrap" 
@@ -14,7 +14,7 @@
       @mouseleave="handleMouseUp">
         <div class="slider" ref="slider">
           <div class="slider-item" v-for="project in duplicatedProjects" :key="project.id">
-            <ProjectCard :project="project" class="card" />
+            <ProjectCard :project="project"/>
           </div>
         </div>
       </div>
@@ -80,13 +80,18 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 
+.home-page {
+  width : 100%;
+  height : 100%;
+}
 
 
 .navbar {
+    box-sizing : border-box;
     padding-top : 1%;
-    height : auto;
+    height : 20%;
     width : 100%;
     display : flex;
     justify-content : space-between;
@@ -99,8 +104,10 @@ export default {
     column-gap : 10%;
 }
 
-.sliderWrap {
-    height : auto;
+.slider-wrap {
+    box-sizing : border-box;
+    padding-top : 3%;
+    height : 80%;
     white-space: nowrap;
     display: flex;
 }
@@ -113,6 +120,10 @@ export default {
     scrollbar-width: none;
 }
 
+.slider-item {
+  height : 100%;
+}
+
 /* Remove scrollbar */
 .slider::-webkit-scrollbar {
     display: none;
@@ -121,6 +132,33 @@ export default {
 /*remove scrollbar for mozilla*/
 .slider {
     overflow: -moz-scrollbars-none;
+}
+
+
+@media screen and (max-width : 465px) {
+
+  .navbar {
+    height : 10%;
+  }
+    .slider-wrap {
+      flex-direction: column;
+    }
+
+  .slider {
+    flex-direction : column; 
+  }
+
+  .slider-item {
+    width : 100%;
+  }
+
+  .navbar{
+    margin-left : 2%;
+  }
+
+  .buttons{
+    display : none;
+  }
 }
 
 </style>

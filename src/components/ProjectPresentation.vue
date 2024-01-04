@@ -34,6 +34,7 @@ export default {
 <style scoped>
 
 
+
 .projectPresentation
 {
     width: 100%;
@@ -66,6 +67,27 @@ export default {
 .description p {
     font-weight : 500;
     margin-bottom : 10%;
+}
+
+@media screen and (max-width : 465px) {
+    .projectPresentation {
+        flex-direction : column;
+        row-gap : 5%;
+        align-items : center;
+        text-align: center;
+    }
+
+    .categoriesAndTitle {
+        width : 80%;
+    }
+
+    .categories {
+        justify-content : center;
+    }
+
+    .description {
+        width : 80%;
+    }
 }
 
 </style>

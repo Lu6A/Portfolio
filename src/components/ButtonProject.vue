@@ -63,4 +63,19 @@ button:hover svg path {
     align-items: center;
   }
 
+@media screen and (max-width : 1024px) {
+  .button-container svg{
+    width : 24px;
+    height : 24px;
+  }
+}
+
+@media screen and (max-width : 800px) {
+  .button-container svg{
+    width : 12px;
+    height : 12px;
+  }
+}
+
+
 </style>

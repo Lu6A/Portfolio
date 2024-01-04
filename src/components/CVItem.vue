@@ -50,6 +50,7 @@ h2{
     top : calc(12%);
     left : calc(-20%);
     color: transparent;
+    white-space : normal;
     /* -webkit-text-stroke: 1px rgba(121, 201, 216, 1);
     -moz-text-stroke: 1px rgba(121, 201, 216, 1); */
 }
@@ -61,6 +62,7 @@ h3 {
     font-weight : 700;
     display : flex;
     align-items : center;
+    white-space : normal;
 }
 
 h4 {
@@ -68,6 +70,11 @@ h4 {
     font-family: 'inter', sans-serif;
     font-size : 1em;
     font-weight : 700;
+    white-space : normal;
+}
+
+p{
+    white-space : normal;
 }
 
 .card {

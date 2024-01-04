@@ -70,6 +70,11 @@ export default {
     window.addEventListener('scroll', this.handleScroll);
     window.addEventListener('click', this.handleUserInteraction);
     },
+
+    beforeUnmount(){
+        window.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener('click', this.handleUserInteraction);
+    }
 }
 
 </script>

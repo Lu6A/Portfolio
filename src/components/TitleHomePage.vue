@@ -27,7 +27,7 @@
     .name {
         font-family: 'Inter', sans-serif;
         font-weight: 400; /*regular*/
-        font-size: 1rem;
+        font-size: 1em;
         margin-left : -5%;
     }
     
@@ -46,7 +46,7 @@
         transform: rotate(-90deg);
         font-family: 'Prompt', sans-serif;
         font-weight: 800; /*extrabold*/
-        font-size: 1.625rem; 
+        font-size: 1.625em; 
         color: transparent;
         -webkit-text-stroke: 1px rgba(234, 89, 25, 1);
         
@@ -55,8 +55,21 @@
     .welcome {
         font-family: 'Prompt', sans-serif;
         font-weight: 800;
-        font-size: 3rem;
+        font-size: 3em;
         line-height: 1.2;
+    }
+
+    @media screen and (max-width : 465px) {
+        .name {
+            font-size : 0.7em;
+        }
+        .hello{
+            font-size : 1em;
+            -webkit-text-stroke: 0.3px rgba(234, 89, 25, 1);
+        }
+        .welcome{
+            font-size : 2em;
+        }
     }
     
     </style>

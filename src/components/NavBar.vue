@@ -50,4 +50,16 @@ export default {
     transform: rotate(-135deg) scale(1.2); 
 }
 
+@media screen and (max-width : 465px){
+
+    .navBar {
+        margin: 4vh 3% 3% 3%;
+    }
+    .buttonsContainer {
+        display : none;
+    }
+}
+
+
+
 </style>

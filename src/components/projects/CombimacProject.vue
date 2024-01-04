@@ -8,6 +8,7 @@
         allowfullscreen
         ref="video"
       ></iframe>
+    <div class="background-rectangle rect1"></div>
     </div>
     <section>
     <div class = "description">
@@ -22,16 +23,17 @@
     </div>
     
     <div class="PCimg">
-        <img src="assets/img/combimac/combimac1.png" alt="combimac1" class="combimacPC" ref="combimacPC">
+        <img src="assets/img/combimac/combimac1.png" alt="combimac1" class="combimacPC">
         <img src="assets/img/combimac/combimac2.png" alt="combimac2" class="combimacPC">
+        <img src="assets/img/combimac/combimac3.png" alt="combimac3" class="combimacPhone">
     </div>
 
     </section>
 
     <div class = "triptych">
+        <img src="assets/img/combimac/combimac14.jpg" alt="projection exposition">
         <img src="assets/img/combimac/combimac1.png" alt="combimac4" ref="triptych">
-        <img src="assets/img/combimac/combimac1.png" alt="combimac5">
-        <img src="assets/img/combimac/combimac1.png" alt="combimac6">
+        <img src="assets/img/combimac/combimac15.jpg" alt="projection exposition">
     </div>
 
     <section>
@@ -48,7 +50,11 @@
     </div>
     </section>
 
-    <img src="assets/img/combimac/combimac7.jpg" alt="combimac7" class = "exposition1" ref="exposition1">
+    <div class = expo>
+        <img src="assets/img/combimac/combimac7.jpg" alt="combimac7" class = "exposition1" ref="exposition1">
+        <div class="background-rectangle rect2"></div>
+    </div>
+    
 
     <div class = "triptych2">
         <img src="assets/img/combimac/combimac8.png" alt="combimac8">
@@ -63,12 +69,7 @@
         <img src="assets/img/combimac/combimac13.jpg" alt="combimac13">
     </div>
 
-    <img src="assets/img/combimac/combimac3.png" alt="combimac3" class="combimacPhone" :style = "{'top' : combimacPhonePosY + 'px', 'left' : combimacPhonePosX + 'px', 'height' : combimacPhoneHeight + 'px'}">
-
-    <div class="backgroundRectangle1" :style = "{'top' : videoCenter + 'px', 'height': backgroundRectangle1Height + 'px'}"></div>
-    <div class="backgroundRectangle2" :style = "{'top' : exposition1Center + 'px','height': backgroundRectangle2Height + 'px' }"></div>
-
-    <FooterPage ref = "footer"/>
+    <FooterPage/>
 
 </template>
 
@@ -97,43 +98,9 @@ export default {
         link : 'combimac.oulico.fr',
         buttonText : 'Voir le site'
         },
-        videoCenter : 0,
-        triptychCenter : 0,
-        exposition1Center : 0,
-        backgroundRectangle1Height : 0,
-        backgroundRectangle2Height : 0,
-        combimacPhonePosY : 0,
-        combimacPhonePosX : 0,
-        combimacPhoneHeight : 0,
-        documentHeight : 0
+
     }
     },
-
-    mounted() {
-
-        this.videoCenter = this.$refs.video.getBoundingClientRect().top + window.scrollY + this.$refs.video.offsetHeight/2;
-
-        this.$refs.combimacPC.onload = () => {
-            this.combimacPhoneHeight = this.$refs.combimacPC.offsetHeight;
-            this.combimacPhonePosY = this.$refs.combimacPC.getBoundingClientRect().top + window.scrollY + this.$refs.combimacPC.offsetHeight/2;
-            this.combimacPhonePosX = this.$refs.combimacPC.getBoundingClientRect().right + window.scrollX - 50;
-        };
-
-        this.$refs.triptych.onload = () => {
-            this.triptychCenter = this.$refs.triptych.getBoundingClientRect().top + window.scrollY + this.$refs.triptych.offsetHeight/2;
-            this.backgroundRectangle1Height = this.triptychCenter - this.videoCenter;
-        };
-
-        this.$refs.exposition1.onload = () => {
-            this.exposition1Center = this.$refs.exposition1.getBoundingClientRect().top + window.scrollY + this.$refs.exposition1.offsetHeight/2;
-        };
-        
-        this.$refs.duet.onload = () => {
-            this.backgroundRectangle2Height = document.body.scrollHeight - this.exposition1Center;
-        };
-        
-        window.addEventListener('resize', this.handleResize);
-    }   
 }
 
 </script>
@@ -171,6 +138,22 @@ img {
     display: flex;
     justify-content: center;
     margin-top: 10%;
+    position: relative;
+}
+
+.background-rectangle {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background-color: var(--projectColor);
+}
+
+.rect1 {
+    height: 545%;
+    max-height : 2500px;
+    top: calc(50%);
+    left: 0;
+
 }
 
 iframe {
@@ -178,7 +161,6 @@ iframe {
     aspect-ratio: 16/9;
     border: none;
     border-radius: 1em;
-    /* position : relative; */
 }
 
 .description{
@@ -208,6 +190,7 @@ iframe {
     justify-content: center;
     row-gap: 15px;
     margin-bottom: 20%;
+    position : relative;
 }
 .combimacPC{
     width : 85%;
@@ -225,6 +208,17 @@ iframe {
     width : 30%;
     aspect-ratio: 1;
     object-fit: cover;
+}
+
+.expo {
+    position : relative;
+    width : 100%;
+}
+
+.rect2 {
+    height: 330%;
+    top: calc(45%);
+    left: 0;
 }
 
 .exposition1{
@@ -268,6 +262,9 @@ iframe {
     z-index: 10;
     aspect-ratio: 9/19.5;
     position : absolute;
+    top : calc(25%);
+    left : calc(75%);
+    height : 50%;
 }
 
 
@@ -292,5 +289,27 @@ iframe {
 ::-webkit-scrollbar-thumb, ::-moz-scrollbar-thumb {
     background-color : #79C9D8; /* Coins arrondis du bouton */
 }
+
+@media screen and (max-width : 1024px){
+    .rect1 {
+        height : 560%;
+    }
+}
+
+@media screen and (max-width : 425px){
+    .rect1 {
+        height : 760%;
+    }
+}
+
+@media screen and (max-width : 300px){
+    .rect1 {
+        height : 1080%;
+    }
+}
+
+
+
+
 
 </style>

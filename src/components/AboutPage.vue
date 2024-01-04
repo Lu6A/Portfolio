@@ -26,7 +26,6 @@
         @mouseleave="handleMouseUp">
     <div class = slider ref="slider1">
     <CVItem :item = "{color : '#EA5919', location : 'Université du Québec à Chicoutimi', year : '2023', date : 'septembre-décembre 2023', title : 'Troisième année de diplôme d’ingénieur IMAC à l’étranger Programmme court d’informatique et de mathématiques', description : 'Conception et programmation de sites web, intelligence artificielle pour le jeu vidéo, gestion de la production dans l’industrie du numérique'}"/>
-    <CVItem :item = "{color : '#EA5919', location : 'ESIEE Paris', year : '2022', date : '2022', title : 'Obtention du TOEIC', description : 'Maîtrise de l\'anglais niveau C1 (960 points)'}"/>
     <CVItem :item = "{color : '#EA5919', location : 'ESIEE Paris', year : '2021' , date : '2021-2023', title : 'Tronc commun du diplôme d’ingénieur IMAC (Image Multimédia Audiovisuel & Communication)', description : 'Programmation orientée objet, Communication, Développement de sites web, Modélisation 3D et Design d’interface UX/UI'}"/>
     <CVItem :item = "{color : '#EA5919', location : 'Lycée Pothier, Orléans', year : '2018', date : '2018-2021', title : 'Classe préparatoire aux grandes écoles filière MPSI-MP', description : 'Bagage scientifique solide, autonomie et rigeur'}"/>
     </div>
@@ -364,6 +363,8 @@ h3{
     }
 
 .slider-wrap {
+    white-space: nowrap;
+    display: flex;
     overflow : hidden;
     margin-bottom : 10%;
 }
@@ -374,6 +375,9 @@ h3{
     width: 100%;
     height: 100%;
     cursor : grab;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .slider:active {
@@ -384,6 +388,15 @@ h3{
     flex-shrink: 0;
     width: 30%;
     margin: 0 5%;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+/*remove scrollbar for mozilla*/
+.slider {
+    overflow: -moz-scrollbars-none;
 }
 
 .competences-container {
