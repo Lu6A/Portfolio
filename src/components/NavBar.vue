@@ -9,7 +9,6 @@
     </router-link>  
     <div class="buttonsContainer">
     <ButtonGeneric buttonText = "À propos" buttonClass = "general"></ButtonGeneric>
-    <ButtonGeneric buttonText = "Contact" buttonClass = "general"></ButtonGeneric>
     </div>
     </div>
 

@@ -44,8 +44,8 @@ export default {
             categories: ['developpement web'],
             description: 'Rick and Morty Characters est mon premier projet web réalisé avec le framework Vue JS et nécessitant des appels à une API. Il s\'agit d\'une application web qui permet de consulter les informations de la série Rick and Morty. L\'utilisateur peut rechercher un personnage, et retrouver la liste des planètes et des épisodes grâce à des appels à l\'API open source "The Rick and Morty API". Ce projet a été réalisé dans le cadre du cours sur le framework Vue JS dispensé lors de ma deuxième année de formation IMAC.',
             class : 'link',
-            link : 'https://gitlab.com/Lu6A/web_2023',
-            buttonText : 'Lien gitlab'
+            link : 'github.com/lucieaugier/projet_vueJS_2023',
+            buttonText : 'Lien github'
         }
     }
 }
@@ -79,7 +79,7 @@ h2{
 
 img {
     border-radius : 1em;
-    box-shadow: 3px 3px 40px rgba(70,70,70,0.2);
+    box-shadow: 3px 3px 40px rgba(246,246,246,0.2);
 }
 
 .backgroundRectangle

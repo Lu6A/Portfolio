@@ -78,11 +78,16 @@ p{
 }
 
 .card {
+    box-sizing : border-box;
     display : flex;
     flex-direction : column;
     justify-content : start;
     padding: 2%;
     position : relative;
 }
+
+/* @media screen and (max-width : 465px){
+
+} */
 </style>
 

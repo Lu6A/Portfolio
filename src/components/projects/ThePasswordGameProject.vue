@@ -47,8 +47,9 @@ export default {
                 color : "#6585A0",
                 categories : ["game", "web"],
                 description : "Le jeu ''The Password Game 2.0 (pour ceux qui n'auraient pas réussi à résoudre The Password Game, le vrai)'' est un projet réalisé dans le cadre du cours de conception et programmation de sites web au cours de mon semestre d'études à l'Université du Québec à Chicoutimi. En collaboration avec ma camarade Nina Grignola, nous avons bénéficié d'une liberté créative pour ce projet, à condition d'appliquer les notions apprises en cours. Toutes deux amatrices du jeu ''The Password Game'', nous nous sommes lancé le défi de le reproduire en y ajoutant nos propres règles, dans le but de proposer un jeu qui puisse être résolu avec succès, contrairement à son ''grand frère''.",
-                link : "https://github.com/grignolanina/UQAC_PROGRAMMATION_WEB_PROJET",
-                textButton : "Voir le projet sur Github",
+                class : "link",
+                link : "github.com/grignolanina/UQAC_PROGRAMMATION_WEB_PROJET",
+                buttonText : "Lien github",
             }
         }
     },

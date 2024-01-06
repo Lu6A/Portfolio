@@ -45,6 +45,7 @@ export default {
   will-change: transform;
   position: relative;
   z-index: 1;
+  cursor: pointer;
 }
 
 .cool-button:hover {

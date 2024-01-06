@@ -72,13 +72,13 @@ export default {
                 description: "SchoolMouv représente un projet élaboré dans le cadre du cours d'UX/UI design de ma formation IMAC. En équipe de quatre personnes, notre mission consistait à conceptualiser l'expérience utilisateur complète d'un projet que nous avions imaginé. Nous avons suivi toutes les étapes de réflexion nécessaires pour élaborer la maquette d'un produit au design intuitif, répondant aux attentes de clients potentiels. Notre choix s'est porté sur le développement d'une application mobile visant à simplifier l'organisation d'un échange scolaire à l'étranger.",
                 class : 'noLink',
             },
-            images : [{src: "assets/img/schoolmouv/interview.png", alt: "guide d'interview", description: "guide d'interview"},
-            {src: "assets/img/schoolmouv/affinity_map.png", alt: "affinity map", description: "affinity map"},
-        {src: "assets/img/schoolmouv/persona.png", alt: "persona", description: "persona"},
-            {src: "assets/img/schoolmouv/xp_map.png", alt: "experience map", description: "experience map"},
-            {src: "assets/img/schoolmouv/mvp.png", alt: "Minimum viable product", description: "minimum viable product"},
-            {src: "assets/img/schoolmouv/userflow.png", alt: "userflow", description: "userflow"},
-            {src: "assets/img/schoolmouv/wireframe.png", alt: "wireframe", description: "wireframe"}]
+            images : [{src: "assets/img/schoolmouv/interview-min.png", alt: "guide d'interview", description: "guide d'interview"},
+            {src: "assets/img/schoolmouv/affinity_map-min.png", alt: "affinity map", description: "affinity map"},
+        {src: "assets/img/schoolmouv/persona-min.png", alt: "persona", description: "persona"},
+            {src: "assets/img/schoolmouv/xp_map-min.png", alt: "experience map", description: "experience map"},
+            {src: "assets/img/schoolmouv/mvp-min.png", alt: "Minimum viable product", description: "minimum viable product"},
+            {src: "assets/img/schoolmouv/userflow-min.png", alt: "userflow", description: "userflow"},
+            {src: "assets/img/schoolmouv/wireframe-min.png", alt: "wireframe", description: "wireframe"}]
         }},
 
     methods: {
@@ -192,6 +192,7 @@ img {
     width : 20%;
     aspect-ratio : 16/9;
     margin-bottom : 3%;
+    cursor : pointer;
 }
 
 .gallery-item p {
@@ -210,6 +211,7 @@ img {
     height : 100%;
     object-fit : cover;
     transition: scale 0.3s ease;
+    will-change: transform  ;
 }
 
 .gallery-item img.enlarged {

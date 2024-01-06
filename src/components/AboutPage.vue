@@ -443,4 +443,45 @@ h3{
     transition: fill 0.3s ease;
 }
 
+@media screen and (max-width : 1024px){
+}
+
+@media screen and (max-width : 800px){
+  
+}
+
+@media screen and (max-width : 465px){
+
+    h2{
+        text-align : center;
+    }
+
+    h3{
+        display : none;
+    }
+    .presentationContainer {
+    flex-direction : column;
+    justify-content: center;
+    align-items: center;
+    }
+    .textContainer {
+        text-align : center;
+        align-items: center;
+    }
+
+    .slider{
+        flex-direction : column;
+        width : 100%;
+        height : 100%;
+    }
+
+    .slider > * {
+        width : 80%;
+        margin : 2% auto 2% 13%;
+    }
+}
+
+
+
+
 </style>

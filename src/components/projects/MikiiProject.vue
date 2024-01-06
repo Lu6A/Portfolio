@@ -132,15 +132,21 @@ img {
 }
 
 .menus {
+    height : 100%;
     width : 48%;
     display : flex;
     flex-direction : column;
-    justify-content : space-evenly;
+    justify-content : space-between;
 }
 
 .menus img {
     margin-bottom : 2%;
 }
+
+.menus img:last-child {
+    margin-bottom: 0;
+}
+
 
 .banner {
     border-radius: 0;
