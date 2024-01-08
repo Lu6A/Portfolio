@@ -96,7 +96,7 @@ section {
 p{
     font-weight: 500;
     text-align: center;
-    font-size: 1.25em;
+    font-size: 1.25rem;
 }
 
 h2{
@@ -104,7 +104,7 @@ h2{
 }
 
 img {
-    border-radius : 1em;
+    border-radius : 1rem;
 }
 
 .video-container {
@@ -220,6 +220,13 @@ iframe {
     width: 100%;
     object-fit: cover;
     border-radius : 0;
+}
+
+@media screen and (max-width : 465px)
+{
+    .rect1 {
+        height : 1060%;
+    }
 }
 
 </style>

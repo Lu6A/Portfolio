@@ -30,14 +30,14 @@ export default {
 <style scoped>
 
 .cool-button {
-  width: 8.5em;
-  height: 2.5em;
+  width: 8.5rem;
+  height: 2.5rem;
   border: 1px solid #131412;
   background-color: #f6f6f6;
-  border-radius: 1em;
+  border-radius: 1rem;
   font-family: 'inter', sans-serif;
   font-weight: 500;
-  font-size: 1em;
+  font-size: 1rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;

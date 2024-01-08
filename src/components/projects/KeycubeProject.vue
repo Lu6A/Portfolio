@@ -74,7 +74,7 @@ import FooterPage from '../FooterPage.vue';
                 description: `Keycube, initié par Damien Brun, représente une approche novatrice de la dactylographie avec la création d'un clavier cubique. Intégrées au cours "Projet" de l'Université du Québec à Chicoutimi au cours de notre semestre à l'international, Nina Grignola et moi-même avons rejoint cette initiative sous la direction de Damien. L'objectif de ce dernier est de cultiver une communauté active autour des keycubes et de partager largement son concept. Notre contribution s'est concentrée sur la conception complète de l'identité visuelle de Keycube, englobant le logo et les couleurs, ainsi que le développement du site web. Ce site aspire à devenir une ressource incontournable pour les passionnés de ce projet original et novateur.
                             `,
                 class : 'link',
-                link : 'https://keycube.github.io/',
+                link : 'keycube.github.io/',
                 buttonText : 'Voir le site'
                 },
             }
@@ -107,6 +107,7 @@ import FooterPage from '../FooterPage.vue';
 .rect2{
     width : 100%;
     height : 750%;
+    /* max-height : 650px; */
     position : absolute;
     top : calc(-45%);
     background-color : var(--projectColor);
@@ -200,7 +201,7 @@ section {
 p{
     font-weight: 500;
     text-align: center;
-    font-size: 1.25em;
+    font-size: 1.25rem;
 }
 
 h2{
@@ -208,10 +209,27 @@ h2{
 }
 
 img {
-    border-radius : 1em;
+    border-radius : 1rem;
     box-shadow: 3px 3px 40px rgba(70,70,70,0.2);
 }
 
+@media screen and (max-width : 768px){
+    .rect2 {
+        height : 550%;
+    }
+}
+
+@media screen and (max-width : 600px){
+    .rect2 {
+        height : 450%;
+    }
+}
+
+@media screen and (max-width : 465px){
+    .rect2{
+        height : 350%;
+    }
+}
 
 
 </style>

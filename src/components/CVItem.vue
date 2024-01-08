@@ -44,7 +44,7 @@ export default {
 <style scoped>
 
 h2{
-    font-size : 4em;
+    font-size : 4rem;
     transform : rotate(-90deg);
     position : absolute;
     top : calc(12%);
@@ -58,7 +58,7 @@ h2{
 h3 {
     margin : 0 0 3% 0;
     font-family: 'inter', sans-serif;
-    font-size : 1em;
+    font-size : 1rem;
     font-weight : 700;
     display : flex;
     align-items : center;
@@ -68,7 +68,7 @@ h3 {
 h4 {
     margin : 0 0 3% 0;
     font-family: 'inter', sans-serif;
-    font-size : 1em;
+    font-size : 1rem;
     font-weight : 700;
     white-space : normal;
 }

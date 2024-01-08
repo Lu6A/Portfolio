@@ -38,6 +38,7 @@
         @mouseleave="handleMouseUp">
     <div class = slider ref="slider2">
     <CVItem :item = "{color : '#FBBC19', location : 'ESIEE Paris', year : '2022', date : '2022-2023', title : 'Vice présidente de l’association du bureau des IMAC', description : 'Organisation et supervision d’évènements accueillant jusqu’à 200 personnes. Prise de décisions assurant le bon fonctionnement de l’association.'}"/>
+    <CVItem :item = "{color : '#FBBC19', location : 'ESIEE Paris', year : '2022', date : '2021-2022', title : 'Community Manager du compte instagram de l’association du bureau des IMAC', description : 'Gestion du compte Instagram de l\'association, création de contenu, réponse aux interactions des visiteurs du compte.'}"/>
     <CVItem :item = "{color : '#FBBC19', location : 'Lycée Pothier, Orléans', year : '2020', date : '2020-2021', title : 'Membre de l’association Taupe Orléans', description : 'Organisation d’évènements accueillant jusqu’à 800 personnes. Organisation d’animations (vente de pulls,tournois sportifs...)'}"/>
     </div>
     </div>
@@ -49,7 +50,8 @@
         @mouseleave="handleMouseUp">
     <div class = slider ref="slider3">
     <CVItem :item = "{color : '#79C9D8', location : 'Agence MIKII', year :'2023', date : 'juin - août 2023', title : 'Stage en webdesign', description : 'Refonte du site internet de l’entreprise. Benchmark, design UX/UI'}"/>
-    <CVItem :item = "{color : '#79C9D8', location : 'Paris', year : '2017', date : '2017 à aujourd\'hui' , title : 'Emplois d’été diverses : vente en boulangerie, conditionnement, cueillette', description : 'Formation en design graphique et digital'}"/>
+    <CVItem :item = "{color : '#79C9D8', location : 'Paris', year : '2017', date : '2017 à aujourd\'hui' , title : 'Emplois d’été diverses : vente en boulangerie, conditionnement, cueillette', description : 'Relation clientèle, minutie, respect de cadences.'}"/>
+    
     </div>
     </div>
     <h2>et grâce à cela j'ai acquis des compétences</h2>
@@ -197,6 +199,8 @@
             </svg>
         </div>
     </div>
+    <FooterPage/>
+
 </template>
 
 <script>
@@ -204,12 +208,15 @@
 import NavBar from './NavBar.vue';
 import PostItComponent from './PostItComponent.vue';
 import CVItem from './CVItem.vue';
+import FooterPage from './FooterPage.vue';
+
 export default {
     name: 'AboutPage',
     components: {
         NavBar,
         PostItComponent,
-        CVItem
+        CVItem,
+        FooterPage
     },
     data() {
         return {

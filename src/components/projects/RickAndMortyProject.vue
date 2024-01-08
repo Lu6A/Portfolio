@@ -70,7 +70,7 @@ section {
 p{
     font-weight: 500;
     text-align: center;
-    font-size: 1.25em;
+    font-size: 1.25rem;
 }
 
 h2{
@@ -78,7 +78,7 @@ h2{
 }
 
 img {
-    border-radius : 1em;
+    border-radius : 1rem;
     box-shadow: 3px 3px 40px rgba(246,246,246,0.2);
 }
 
@@ -130,9 +130,16 @@ img {
         height : 220%;
     }
 
+
     .credits {
         margin : -5% 0 2% 0;
-        font-size : 0.75em;
+        font-size : 0.75rem;
     }
 
+    @media screen and (max-width : 465px)
+    {
+        .rect1 {
+            height : 318%;
+        }
+    }
 </style>

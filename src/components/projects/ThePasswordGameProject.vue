@@ -99,7 +99,7 @@ section {
 p{
     font-weight: 500;
     text-align: center;
-    font-size: 1.25em;
+    font-size: 1.25rem;
 }
 
 h2{
@@ -107,7 +107,7 @@ h2{
 }
 
 img {
-    border-radius : 1em;
+    border-radius : 1rem;
     box-shadow: 3px 3px 40px rgba(70,70,70,0.2);
 }
 
@@ -163,5 +163,10 @@ video {
     align-self : flex-start;
 }
 
-
+@media screen and (max-width : 465px)
+{
+    .background-rectangle{
+        height : 465%;
+    }
+}
 </style>

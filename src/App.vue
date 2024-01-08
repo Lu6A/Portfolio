@@ -44,7 +44,7 @@ main  {
 h1 {
   font-family: 'Prompt', sans-serif;
   font-weight: 800;
-  font-size: 4em;
+  font-size: 4rem;
   text-transform: uppercase;
   color: #131412;
   margin: 0;
@@ -53,7 +53,7 @@ h1 {
 h2 {
   font-family: 'Prompt', sans-serif;
   font-weight: 700;
-  font-size: 3em;
+  font-size: 3rem;
   color: #131412;
   margin: 2% 0;
 }
